@@ -1,0 +1,231 @@
+{
+  "eternity-rings": {
+    "title": "Eternity Rings",
+    "products": [
+      {
+        "id": "e1",
+        "name": "Classic Round Eternity Band",
+        "image": "/uploads/1774087907197-WhatsApp_Image_2026-03-19_at_6.03.27_PM.jpeg",
+        "details": "Elegant 18K White Gold band featuring brilliant round-cut diamonds seamlessly wrapping around the entire ring. Total weight 2.0 carats of VS clarity."
+      },
+      {
+        "id": "e2",
+        "name": "Oval Cut Eternity Ring",
+        "image": "/uploads/1774087983295-WhatsApp_Image_2026-03-19_at_6.03.20_PM.jpeg",
+        "details": "A breathtaking statement piece crafted in Platinum, showcasing meticulously matched oval diamonds perfectly calibrated for maximum sparkle."
+      },
+      {
+        "id": "e3",
+        "name": "Emerald Cut Half-Eternity",
+        "image": "/uploads/1774088010306-WhatsApp_Image_2026-03-19_at_6.03.25_PM.jpeg",
+        "details": "Modern and sophisticated emerald-cut diamonds cast a hall-of-mirrors effect, set securely in a low-profile 18K Yellow Gold mounting."
+      },
+      {
+        "id": "p_1774088218214",
+        "name": " Crown Embrace Diamond Ring",
+        "image": "/uploads/1774088224957-WhatsApp_Image_2026-03-19_at_6.03.26_PM.jpeg",
+        "details": "Where elegance meets brilliance."
+      },
+      {
+        "id": "p_1774088362944",
+        "name": " Empress Marquise Diamond Ring",
+        "image": "/uploads/1774088369160-WhatsApp_Image_2026-03-19_at_6.03.25_PM__1_.jpeg",
+        "details": "Crafted for queens, designed to shine forever."
+      },
+      {
+        "id": "p_1774088448750",
+        "name": " Empress Pear Diamond Ring",
+        "image": "/uploads/1774088460420-WhatsApp_Image_2026-03-19_at_6.03.24_PM__1_.jpeg",
+        "details": "A graceful teardrop of brilliance, crafted for timeless luxury."
+      },
+      {
+        "id": "p_1774088545414",
+        "name": "Empress Radiant Diamond Ring",
+        "image": "/uploads/1774088560651-WhatsApp_Image_2026-03-19_at_6.03.21_PM.jpeg",
+        "details": "A radiant symbol of brilliance, crafted for everlasting elegance."
+      },
+      {
+        "id": "p_1774090668547",
+        "name": "Empress Radiant Bridal Set",
+        "image": "/uploads/1774090683678-WhatsApp_Image_2026-03-19_at_6.03.24_PM.jpeg",
+        "details": "A perfect union of brilliance and elegance, crafted to shine together forever."
+      }
+    ]
+  },
+  "bridal-necklaces": {
+    "title": "Bridal Necklaces",
+    "products": [
+      {
+        "id": "p_1774090803539",
+        "name": "Empress Vine Drop Necklace",
+        "image": "/uploads/1774090811522-WhatsApp_Image_2026-03-19_at_6.03.20_PM__1_.jpeg",
+        "details": "A graceful cascade of brilliance, designed to flow with elegance."
+      },
+      {
+        "id": "p_1774090887946",
+        "name": "Empress Tennis Diamond Necklace",
+        "image": "/uploads/1774090894394-WhatsApp_Image_2026-03-19_at_6.03.19_PM__2_.jpeg",
+        "details": "A timeless line of brilliance, crafted to shine with every moment."
+      },
+      {
+        "id": "p_1774090944850",
+        "name": "Eternal Radiance Diamond Necklace",
+        "image": "/uploads/1774090960620-WhatsApp_Image_2026-03-19_at_6.03.19_PM.jpeg",
+        "details": "A timeless line of pure brilliance, crafted to shine forever"
+      },
+      {
+        "id": "p_1774091091266",
+        "name": "Empress Cascade Diamond Necklace",
+        "image": "/uploads/1774091126393-IMG_1603.PNG",
+        "details": "A cascading flow of brilliance, crafted to capture every glance."
+      },
+      {
+        "id": "p_1774091227946",
+        "name": "Empress Blossom Drop Necklace",
+        "image": "/uploads/1774091241315-IMG_0690.PNG",
+        "details": "A blooming masterpiece of diamonds, crafted to radiate pure elegance."
+      },
+      {
+        "id": "p_1774091350281",
+        "name": "Empress Round Tennis Necklace",
+        "image": "/uploads/1774091369157-IMG-20250611-WA0093.jpg",
+        "details": "A seamless line of round brilliance, crafted for timeless elegance."
+      },
+      {
+        "id": "p_1774091460538",
+        "name": "Empress Pear Radiance Necklace",
+        "image": "/uploads/1774091505308-IMG-20250611-WA0094.jpg",
+        "details": "A royal line of pear brilliance, crafted to shine with every movement."
+      },
+      {
+        "id": "p_1774091558449",
+        "name": "Mixed Shape Lab Diamond Bezel Tennis Necklace",
+        "image": "/uploads/1774091659929-Mixed_Shape_Lab_Diamond_Bezel_Tennis_Necklace.webp",
+        "details": "A modern fusion of shapes, set in perfect bezel brilliance."
+      }
+    ]
+  },
+  "diamond-bracelets": {
+    "title": "Diamond Bracelets",
+    "products": [
+      {
+        "id": "p_1774598234498",
+        "name": "Marquise Lab Diamond Rope Tennis Bracelet",
+        "image": "/uploads/1774598240766-Marquise_cut_lab_diamond_rope_tennis_bracelet.webp",
+        "details": "Elegant marquise lab diamond rope tennis bracelet crafted for timeless sparkle and modern luxury."
+      },
+      {
+        "id": "p_1774598402220",
+        "name": "Mini Lab Diamond Tennis Bracelet",
+        "image": "/uploads/1774598407971-Mini_Lab_Diamond_Tennis_Bracelet.webp",
+        "details": "Delicate mini lab diamond tennis bracelet designed for subtle sparkle and everyday elegance"
+      },
+      {
+        "id": "p_1774598447842",
+        "name": "Lab Grown Pink Diamond Tennis Bracelet",
+        "image": "/uploads/1774598476860-Lab_Grown_Pink_Diamond_Tennis_Bracelet.webp",
+        "details": "lab-grown pink diamond tennis bracelet crafted for elegant sparkle with a modern, feminine touch."
+      },
+      {
+        "id": "p_1774598537386",
+        "name": "Pear and Round Lab Diamond Tennis Bracelet",
+        "image": "/uploads/1774598542165-pear_round_tennis_bracelet.webp",
+        "details": "Elegant pear and round lab diamond tennis bracelet designed for a timeless blend of sparkle and sophistication."
+      },
+      {
+        "id": "p_1774598584770",
+        "name": "Classic Lab Diamond Tennis Bracelet",
+        "image": "/uploads/1774598604154-Classic_Lab_Diamond_Tennis_Bracelet.webp",
+        "details": "Timeless lab diamond tennis bracelet crafted for classic elegance and everyday brilliance."
+      },
+      {
+        "id": "p_1774598658066",
+        "name": "Large Lab Grown Emerald Cut Tennis Bracelet",
+        "image": "/uploads/1774598664587-Large_Lab_Grown_Emerald_Cut_Tennis_Bracelet.webp",
+        "details": "Bold lab-grown emerald cut tennis bracelet designed for striking brilliance and refined elegance."
+      },
+      {
+        "id": "p_1774598689337",
+        "name": "Bezel Emerald Lab Diamond Tennis Bracelet",
+        "image": "/uploads/1774598714455-Bezel_Emerald_Lab_Diamond_Tennis_Bracelet_WG.webp",
+        "details": "Bezel-set emerald lab diamond tennis bracelet crafted for sleek sparkle and modern elegance."
+      }
+    ]
+  },
+  "statement-earrings": {
+    "title": "Statement Earrings",
+    "products": [
+      {
+        "id": "p_1774598811745",
+        "name": "Lab Grown Old European Cut Diamond Stud Earrings",
+        "image": "/uploads/1774598817873-Lab_Grown_Old_European_Cut_Diamond_Stud_Earrings.webp",
+        "details": "Lab-grown Old European cut diamond stud earrings offering vintage charm with timeless sparkle."
+      },
+      {
+        "id": "p_1774598869337",
+        "name": "Lab Grown Diamond Studs",
+        "image": "/uploads/1774598875250-Lab_Grown_Diamond_Studs.webp",
+        "details": "Classic lab-grown diamond studs for everyday elegance and brilliant sparkle."
+      },
+      {
+        "id": "p_1774598929457",
+        "name": "Lab Grown Princess Cut Diamond Studs",
+        "image": "/uploads/1774598935322-Lab_Grown_Princess_Cut_Diamond_Studs.webp",
+        "details": "Lab-grown princess cut diamond studs for modern elegance and dazzling brilliance."
+      },
+      {
+        "id": "p_1774598994089",
+        "name": "Marquise Diamond Clover Studs",
+        "image": "/uploads/1774598998953-Marquise_Diamond_Clover_Studs.webp",
+        "details": "Marquise diamond clover studs blending playful charm with sparkling elegance."
+      },
+      {
+        "id": "p_1774599048537",
+        "name": "Octagon Nova Lab Diamond Bezel Studs",
+        "image": "/uploads/1774599053877-Octagon_Nova_Lab_Diamond_Bezel_Studs.webp",
+        "details": "Octagon Nova lab diamond bezel studs, combining modern geometric style with brilliant sparkle."
+      },
+      {
+        "id": "p_1774599108761",
+        "name": "Lab Grown Old Mine Cut Diamond Drop Earrings",
+        "image": "/uploads/1774599113791-Lab_Grown_Antique_Cushion_Old_Mine_Cut_Earrings.webp",
+        "details": "Lab-grown Old Mine cut diamond drop earrings for vintage-inspired elegance and timeless sparkle."
+      }
+    ]
+  },
+  "solitaire-pendants": {
+    "title": "Solitaire Pendants",
+    "products": [
+      {
+        "id": "p_1774599180953",
+        "name": "Lab Grown Round Brilliant Cut Pendant Necklace",
+        "image": "/uploads/1774599185596-Lab_Grown_Round_Brilliant_Cut_Pendant_Necklace.webp",
+        "details": "Lab-grown round brilliant diamond pendant necklace for classic sparkle and effortless elegance."
+      },
+      {
+        "id": "p_1774599242657",
+        "name": "Lab Grown Pink Diamond Pear Pendant Necklace",
+        "image": "/uploads/1774599247515-Lab_Grown_Pink_Diamond_Pear_Pendant_Necklace.webp",
+        "details": "Lab-grown pink diamond pear pendant necklace for a delicate, feminine sparkle."
+      },
+      {
+        "id": "p_1774599310128",
+        "name": "Lab Grown Old European Cut Diamond Necklace",
+        "image": "/uploads/1774599316587-Lab_Grown_Old_European_Cut_Diamond_Necklace.webp",
+        "details": "Lab-grown Old European cut diamond necklace for vintage-inspired elegance and timeless sparkle."
+      },
+      {
+        "id": "p_1774599380337",
+        "name": "Cloud Bezel Lab Grown Old Mine Cut Pendant Necklace",
+        "image": "/uploads/1774599384636-Cloud_Bezel_Lab_Grown_Old_Mine_Cut_Pendant_Necklace.webp",
+        "details": "Cloud bezel lab-grown Old Mine cut pendant necklace for unique, vintage-inspired sparkle."
+      },
+      {
+        "id": "p_1774599449321",
+        "name": "Lab Grown Blue Diamond Pendant Necklace",
+        "image": "/uploads/1774599454692-Lab_Grown_Blue_Diamond_Pendant_Necklace_2.webp",
+        "details": "Lab-grown blue diamond pendant necklace for striking color and timeless elegance."
+      }
+    ]
+  }
+}

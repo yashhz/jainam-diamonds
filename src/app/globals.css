@@ -1,0 +1,250 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #CCA43D;
+  --color-gold-light: #E8C96B;
+  --color-gold-dark: #A8832A;
+  --color-gold-glow: rgba(204, 164, 61, 0.15);
+  --color-gold-subtle: rgba(204, 164, 61, 0.05);
+  --color-gold-bright: #F5D76E;
+  --color-black-light: #1a1a1a;
+  --color-black-mid: #111111;
+  --color-black-dark: #0a0a0a;
+  --color-black-void: #050505;
+}
+
+@layer base {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ffffff;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans), 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ─── Keyframes ─────────────────────────────────────────────── */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.94); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes progressBar {
+  0%   { width: 0%; }
+  80%  { width: 92%; }
+  100% { width: 100%; }
+}
+
+@keyframes goldPulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50%       { opacity: 1;   transform: scale(1.04); }
+}
+
+@keyframes lineExpand {
+  from { width: 0; opacity: 0; }
+  to   { width: 100%; opacity: 1; }
+}
+
+@keyframes floatWord {
+  0%   { opacity: 0; transform: translateY(8px); }
+  30%  { opacity: 1; transform: translateY(0); }
+  70%  { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-8px); }
+}
+
+@keyframes borderGlow {
+  0%, 100% { border-color: rgba(204, 164, 61, 0.15); }
+  50%       { border-color: rgba(204, 164, 61, 0.45); }
+}
+
+@keyframes rotateHue {
+  from { filter: hue-rotate(0deg); }
+  to   { filter: hue-rotate(360deg); }
+}
+
+/* ─── Utility Animation Classes ──────────────────────────────── */
+
+.animate-fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-pulse-slow {
+  animation: goldPulse 2.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-progress-bar {
+  animation: progressBar 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* ─── Gold Shimmer Text ──────────────────────────────────────── */
+
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    #a8832a 0%,
+    #e8c96b 30%,
+    #CCA43D 50%,
+    #e8c96b 70%,
+    #a8832a 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+.gold-shimmer-intense {
+  background: linear-gradient(
+    110deg,
+    #a8832a 0%,
+    #CCA43D 30%,
+    #E8C96B 45%,
+    #ffffff 50%,
+    #E8C96B 55%,
+    #CCA43D 70%,
+    #a8832a 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+/* ─── Noise Texture Overlay ──────────────────────────────────── */
+
+.noise-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.025;
+  z-index: 1;
+}
+
+/* ─── Gold Divider ───────────────────────────────────────────── */
+
+.gold-line {
+  display: block;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #CCA43D, transparent);
+}
+
+/* ─── Card Hover Effects ─────────────────────────────────────── */
+
+.luxury-card {
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s ease,
+              box-shadow 0.4s ease;
+  will-change: transform;
+}
+
+.luxury-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
+              0 0 20px rgba(204, 164, 61, 0.1);
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CCA43D33;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #CCA43D66;
+}
+
+/* ─── Mobile Touch Optimizations ─────────────────────────────── */
+
+@media (max-width: 768px) {
+  .luxury-card:hover {
+    transform: none;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* ─── Focus Visible Styles ─────────────────────────────────── */
+
+*:focus-visible {
+  outline: 2px solid #CCA43D;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #CCA43D;
+  outline-offset: 4px;
+}
+
+/* ─── Staggered Children ─────────────────────────────────────── */
+
+.stagger-children > *:nth-child(1) { animation-delay: 0ms; }
+.stagger-children > *:nth-child(2) { animation-delay: 60ms; }
+.stagger-children > *:nth-child(3) { animation-delay: 120ms; }
+.stagger-children > *:nth-child(4) { animation-delay: 180ms; }
+.stagger-children > *:nth-child(5) { animation-delay: 240ms; }
+.stagger-children > *:nth-child(6) { animation-delay: 300ms; }
+.stagger-children > *:nth-child(7) { animation-delay: 360ms; }
+.stagger-children > *:nth-child(8) { animation-delay: 420ms; }
