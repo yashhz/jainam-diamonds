@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-type ViewState = "loading" | "home" | "diamonds" | "jewelry" | "collection" | "privacy" | "terms";
+type ViewState = "loading" | "home" | "diamonds" | "jewelry" | "collection";
 
 const WORDS = ["Precision.", "Brilliance.", "Provenance.", "Jainam Diamonds."];
 
@@ -147,6 +147,144 @@ export default function ClientPage({ config, products }: { config: any, products
               </div>
             </div>
           </div>
+
+          {/* About Us & Founder Section */}
+          <section className="w-full bg-[#070707] py-24 md:py-32 px-6 md:px-12 border-t border-[#121212] relative overflow-hidden">
+            {/* Subtle background glow */}
+            <div className="absolute -left-48 top-1/4 w-96 h-96 rounded-full bg-[#CCA43D]/3 blur-[120px] pointer-events-none" />
+            <div className="absolute -right-48 bottom-1/4 w-96 h-96 rounded-full bg-[#CCA43D]/3 blur-[120px] pointer-events-none" />
+
+            <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16 relative z-10">
+              {/* Image / Graphic container */}
+              <div className="w-full lg:w-5/12 flex flex-col gap-6 order-2 lg:order-1">
+                <div className="relative aspect-[4/5] w-full border border-[#1a1a1a] p-4 bg-[#0a0a0a]/50 backdrop-blur-sm group hover:border-[#CCA43D]/40 transition-all duration-500">
+                  <div className="relative w-full h-full overflow-hidden">
+                    <Image 
+                      src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1500&auto=format&fit=crop" 
+                      alt="Bespoke Craftsmanship" 
+                      fill 
+                      className="object-cover transition-transform duration-[1200ms] group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#070707] via-transparent to-transparent" />
+                  </div>
+                  {/* Decorative corner accents */}
+                  <div className="absolute top-2 left-2 w-4 h-4 border-t border-l border-[#CCA43D]/40" />
+                  <div className="absolute top-2 right-2 w-4 h-4 border-t border-r border-[#CCA43D]/40" />
+                  <div className="absolute bottom-2 left-2 w-4 h-4 border-b border-l border-[#CCA43D]/40" />
+                  <div className="absolute bottom-2 right-2 w-4 h-4 border-b border-r border-[#CCA43D]/40" />
+                </div>
+                
+                {/* Founder Info Overlay Card */}
+                <div className="border border-[#1a1a1a] bg-[#0c0c0c]/80 backdrop-blur-sm p-6 text-center lg:text-left transition-all duration-500 hover:border-[#CCA43D]/30">
+                  <p className="text-[10px] uppercase tracking-[0.25em] text-[#CCA43D] mb-1 font-semibold">Founder & Visionary</p>
+                  <h4 className="text-xl font-serif text-white tracking-wide">Jainam Mehta</h4>
+                  <div className="w-8 h-[1px] bg-[#CCA43D] my-3 mx-auto lg:mx-0" />
+                  <p className="text-xs text-gray-400 font-light italic leading-relaxed">
+                    "Every diamond we curate is a testament to the pursuit of ultimate perfection. We don't just supply gems; we immortalize moments of profound emotion."
+                  </p>
+                </div>
+              </div>
+
+              {/* Text content */}
+              <div className="w-full lg:w-7/12 flex flex-col justify-center order-1 lg:order-2">
+                <span className="text-[#CCA43D] text-[10px] md:text-xs tracking-[0.3em] uppercase mb-4 font-semibold inline-block">The Provenance</span>
+                <h2 className="text-3xl md:text-5xl font-serif text-white mb-6 leading-tight">
+                  About Jainam Diamonds
+                </h2>
+                <div className="w-20 h-[1px] bg-[#CCA43D] mb-8" />
+                
+                <div className="space-y-6 text-gray-300 text-sm md:text-base leading-relaxed font-light">
+                  <p>
+                    Established on the principles of immaculate precision and timeless luxury, <strong className="text-white font-medium">Jainam Diamonds</strong> represents the absolute pinnacle of diamond curation. Rooted deeply in Surat—the diamond capital of the world—our legacy thrives where world-class craftsmanship meets the most sophisticated global standards.
+                  </p>
+                  <p>
+                    Under the expert stewardship of our founder, <strong className="text-white font-medium">Jainam Mehta</strong>, we operate with a singular, uncompromising vision: to elevate diamond selection into a profound form of art. Every single stone is examined, touched, and certified under three generations of rigorous training.
+                  </p>
+                  <p>
+                    Whether selecting a flawless natural diamond shaped over billions of years under the Earth’s mantle, or a pristine, traceably sustainable lab-grown diamond, our patrons receive pieces that set a new benchmark for fire, brilliance, and emotional value.
+                  </p>
+                </div>
+
+                <div className="mt-10 flex flex-wrap gap-8 items-center pt-8 border-t border-[#1a1a1a]">
+                  <div>
+                    <p className="text-3xl font-serif text-[#CCA43D]">3+</p>
+                    <p className="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Generations of Eyes</p>
+                  </div>
+                  <div className="w-[1px] h-10 bg-[#1a1a1a]" />
+                  <div>
+                    <p className="text-3xl font-serif text-[#CCA43D]">90%</p>
+                    <p className="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Surat Cut Advantage</p>
+                  </div>
+                  <div className="w-[1px] h-10 bg-[#1a1a1a]" />
+                  <div>
+                    <p className="text-3xl font-serif text-[#CCA43D]">100%</p>
+                    <p className="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Certified Integrity</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Pillars of Excellence / Why Us Section */}
+          <section className="w-full bg-[#050505] py-24 md:py-32 px-6 md:px-12 border-t border-[#121212] relative overflow-hidden">
+            {/* Ambient gold line across bg */}
+            <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-[#CCA43D]/10 to-transparent" />
+            
+            <div className="max-w-6xl mx-auto relative z-10">
+              <div className="text-center max-w-2xl mx-auto mb-20">
+                <span className="text-[#CCA43D] text-[10px] md:text-xs tracking-[0.3em] uppercase mb-4 font-semibold inline-block">The Signature Standard</span>
+                <h2 className="text-3xl md:text-5xl font-serif text-white mb-6">Four Pillars of Perfection</h2>
+                <div className="w-16 h-[1px] bg-[#CCA43D] mx-auto mb-6" />
+                <p className="text-gray-400 text-xs md:text-sm font-light leading-relaxed tracking-wide">
+                  Our pursuit of unmatched brilliance is anchored upon four core values that define every commission and curation we deliver.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 stagger-children">
+                {[
+                  {
+                    num: "I",
+                    title: "Surat Craft Heritage",
+                    desc: "Harnessing the immense prestige of Surat, the unparalleled diamond-cutting nucleus of the planet. Generational masters finish each facet with unmatched mathematical precision."
+                  },
+                  {
+                    num: "II",
+                    title: "Bespoke Consultation",
+                    desc: "We align with your distinct creative desires. Every major piece undergoes personal curation directly under Jainam Mehta, ensuring your jewelry is entirely unique."
+                  },
+                  {
+                    num: "III",
+                    title: "Ethical Provenance",
+                    desc: "Pure trust. Every natural and lab-grown diamond we represent is responsibly sourced, certified conflict-free, and graded by world-renowned gemological laboratories."
+                  },
+                  {
+                    num: "IV",
+                    title: "Optic Fire Engineering",
+                    desc: "Beyond generic dimensions. We select stones graded only with ultimate light dispersion potential, ensuring spectacular fire, brilliance, and scintillation under all lighting."
+                  }
+                ].map((pillar) => (
+                  <div 
+                    key={pillar.num}
+                    className="luxury-card group border border-[#141414] hover:border-[#CCA43D]/30 bg-[#0a0a0a] p-8 transition-all duration-500 flex flex-col justify-between hover:-translate-y-1 relative animate-fade-in"
+                  >
+                    <div>
+                      {/* Giant subtle roman numeral */}
+                      <span className="text-[4rem] font-serif text-white/[0.02] group-hover:text-white/[0.04] transition-colors duration-500 absolute top-4 right-6 select-none pointer-events-none">
+                        {pillar.num}
+                      </span>
+                      <div className="w-8 h-[1px] bg-[#CCA43D]/50 mb-8 group-hover:w-16 transition-all duration-500" />
+                      <h3 className="text-lg md:text-xl font-serif text-white mb-4 group-hover:text-[#CCA43D] transition-colors duration-300">
+                        {pillar.title}
+                      </h3>
+                      <p className="text-gray-400 text-xs md:text-sm font-light leading-relaxed">
+                        {pillar.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
           {/* Default Footer is handled below */}
         </>
       )}
@@ -354,25 +492,7 @@ export default function ClientPage({ config, products }: { config: any, products
         </div>
       )}
 
-      {/* Privacy View */}
-      {view === "privacy" && (
-        <div className="animate-slide-up max-w-4xl mx-auto px-6 py-20 pb-32 min-h-screen">
-          <h1 className="text-4xl font-serif mb-12 text-[#CCA43D]">Privacy Policy</h1>
-          <div className="text-gray-300 font-light leading-relaxed whitespace-pre-wrap">
-            {config.privacyPolicy || "Privacy policy content goes here."}
-          </div>
-        </div>
-      )}
 
-      {/* Terms View */}
-      {view === "terms" && (
-        <div className="animate-slide-up max-w-4xl mx-auto px-6 py-20 pb-32 min-h-screen">
-          <h1 className="text-4xl font-serif mb-12 text-[#CCA43D]">Terms of Service</h1>
-          <div className="text-gray-300 font-light leading-relaxed whitespace-pre-wrap">
-            {config.termsOfService || "Terms of service content goes here."}
-          </div>
-        </div>
-      )}
 
       {/* Footer */}
       <footer className="w-full mt-auto" style={{ background: 'linear-gradient(180deg, #050505 0%, #030303 100%)' }}>
@@ -438,8 +558,6 @@ export default function ClientPage({ config, products }: { config: any, products
                 {[
                   { label: 'The Diamonds', action: () => setView('diamonds') },
                   { label: 'Fine Jewelry', action: () => setView('jewelry') },
-                  { label: 'Privacy Policy', action: () => { setView('privacy'); window.scrollTo(0,0); } },
-                  { label: 'Terms of Service', action: () => { setView('terms'); window.scrollTo(0,0); } },
                 ].map(({ label, action }) => (
                   <li key={label}>
                     <button onClick={action} className="text-gray-300 hover:text-[#CCA43D] text-sm font-light tracking-wide transition-colors duration-300 text-left group flex items-center gap-2">
@@ -479,10 +597,7 @@ export default function ClientPage({ config, products }: { config: any, products
             <p className="text-gray-500 text-[11px] tracking-[0.2em] uppercase">
               &copy; {new Date().getFullYear()} Jainam Diamonds — All rights reserved
             </p>
-            <div className="flex gap-6 text-gray-500 text-[11px] tracking-[0.2em] uppercase">
-              <span onClick={() => { setView("privacy"); window.scrollTo(0,0); }} className="hover:text-[#CCA43D] transition-colors cursor-pointer">Privacy Policy</span>
-              <span onClick={() => { setView("terms"); window.scrollTo(0,0); }} className="hover:text-[#CCA43D] transition-colors cursor-pointer">Terms of Service</span>
-            </div>
+
           </div>
         </div>
 
