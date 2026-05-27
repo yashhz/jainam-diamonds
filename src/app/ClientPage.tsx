@@ -98,8 +98,8 @@ export default function ClientPage({ config, products }: { config: any, products
           <div className="flex flex-col md:flex-row w-full animate-fade-in relative min-h-screen">
             {/* Center Brand Overlay */}
             <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-none z-10 w-full">
-              <div className="relative w-80 h-80 pointer-events-auto">
-                <Image src="/logo.png" alt="Jainam Diamonds Logo" fill className="object-contain" />
+              <div className="relative w-64 h-64 md:w-[440px] md:h-[440px] pointer-events-auto transition-all duration-700 hover:scale-[1.03]">
+                <Image src="/logo.png" alt="Jainam Diamonds Logo" fill className="object-contain" priority />
               </div>
             </div>
 
@@ -119,7 +119,7 @@ export default function ClientPage({ config, products }: { config: any, products
                 <p className="text-[#CCA43D] text-[10px] md:text-xs tracking-[0.35em] uppercase mb-4 font-medium opacity-80">The Diamonds</p>
                 <h2 className="text-4xl md:text-7xl lg:text-8xl text-white font-serif leading-[0.9] mb-6 group-hover:-translate-y-2 transition-transform duration-700 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">Precision.<br/>Brilliance.</h2>
                 <div className="w-10 h-[1px] bg-[#CCA43D] group-hover:w-20 transition-all duration-700" />
-                <p className="mt-5 text-gray-400 tracking-wider text-xs md:text-sm max-h-0 overflow-hidden group-hover:max-h-16 transition-all duration-700 delay-100 max-w-xs">
+                <p className="premium-subtext mt-5 max-h-0 overflow-hidden group-hover:max-h-16 transition-all duration-700 delay-100 max-w-xs">
                   Every facet engineered to bend light at its most perfect angle.
                 </p>
               </div>
@@ -141,7 +141,7 @@ export default function ClientPage({ config, products }: { config: any, products
                 <p className="text-[#CCA43D] text-[10px] md:text-xs tracking-[0.35em] uppercase mb-4 font-medium opacity-80">Fine Jewelry</p>
                 <h2 className="text-4xl md:text-7xl lg:text-8xl text-white font-serif leading-[0.9] mb-6 group-hover:-translate-y-2 transition-transform duration-700 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">Worn.<br/>Cherished.</h2>
                 <div className="w-10 h-[1px] bg-[#CCA43D] ml-auto group-hover:w-20 transition-all duration-700" />
-                <p className="mt-5 text-gray-400 tracking-wider text-xs md:text-sm max-h-0 overflow-hidden group-hover:max-h-16 transition-all duration-700 delay-100 max-w-xs">
+                <p className="premium-subtext mt-5 max-h-0 overflow-hidden group-hover:max-h-16 transition-all duration-700 delay-100 max-w-xs">
                   Passed down. Every piece holds a story worth telling forever.
                 </p>
               </div>
@@ -179,7 +179,7 @@ export default function ClientPage({ config, products }: { config: any, products
                   <p className="text-[10px] uppercase tracking-[0.25em] text-[#CCA43D] mb-1 font-semibold">Founder & Visionary</p>
                   <h4 className="text-xl font-serif text-white tracking-wide">Jainam Mehta</h4>
                   <div className="w-8 h-[1px] bg-[#CCA43D] my-3 mx-auto lg:mx-0" />
-                  <p className="text-xs text-gray-400 font-light italic leading-relaxed">
+                  <p className="premium-subtext italic">
                     "Every diamond we curate is a testament to the pursuit of ultimate perfection. We don't just supply gems; we immortalize moments of profound emotion."
                   </p>
                 </div>
@@ -193,12 +193,12 @@ export default function ClientPage({ config, products }: { config: any, products
                 </h2>
                 <div className="w-20 h-[1px] bg-[#CCA43D] mb-8" />
                 
-                <div className="space-y-6 text-gray-300 text-sm md:text-base leading-relaxed font-light">
+                <div className="space-y-6 premium-subtext">
                   <p>
-                    Established on the principles of immaculate precision and timeless luxury, <strong className="text-white font-medium">Jainam Diamonds</strong> represents the absolute pinnacle of diamond curation. Rooted deeply in Surat—the diamond capital of the world—our legacy thrives where world-class craftsmanship meets the most sophisticated global standards.
+                    Established on the principles of immaculate precision and timeless luxury, <strong className="text-white font-semibold">Jainam Diamonds</strong> represents the absolute pinnacle of diamond curation. Rooted deeply in Surat—the diamond capital of the world—our legacy thrives where world-class craftsmanship meets the most sophisticated global standards.
                   </p>
                   <p>
-                    Under the expert stewardship of our founder, <strong className="text-white font-medium">Jainam Mehta</strong>, we operate with a singular, uncompromising vision: to elevate diamond selection into a profound form of art. Every single stone is examined, touched, and certified under three generations of rigorous training.
+                    Under the expert stewardship of our founder, <strong className="text-white font-semibold">Jainam Mehta</strong>, we operate with a singular, uncompromising vision: to elevate diamond selection into a profound form of art. Every single stone is examined, touched, and certified under three generations of rigorous training.
                   </p>
                   <p>
                     Whether selecting a flawless natural diamond shaped over billions of years under the Earth’s mantle, or a pristine, traceably sustainable lab-grown diamond, our patrons receive pieces that set a new benchmark for fire, brilliance, and emotional value.
@@ -208,17 +208,17 @@ export default function ClientPage({ config, products }: { config: any, products
                 <div className="mt-10 flex flex-wrap gap-8 items-center pt-8 border-t border-[#1a1a1a]">
                   <div>
                     <p className="text-3xl font-serif text-[#CCA43D]">3+</p>
-                    <p className="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Generations of Eyes</p>
+                    <p className="text-[10px] uppercase tracking-widest mt-1 premium-subtext">Generations of Eyes</p>
                   </div>
                   <div className="w-[1px] h-10 bg-[#1a1a1a]" />
                   <div>
                     <p className="text-3xl font-serif text-[#CCA43D]">90%</p>
-                    <p className="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Surat Cut Advantage</p>
+                    <p className="text-[10px] uppercase tracking-widest mt-1 premium-subtext">Surat Cut Advantage</p>
                   </div>
                   <div className="w-[1px] h-10 bg-[#1a1a1a]" />
                   <div>
                     <p className="text-3xl font-serif text-[#CCA43D]">100%</p>
-                    <p className="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Certified Integrity</p>
+                    <p className="text-[10px] uppercase tracking-widest mt-1 premium-subtext">Certified Integrity</p>
                   </div>
                 </div>
               </div>
@@ -235,7 +235,7 @@ export default function ClientPage({ config, products }: { config: any, products
                 <span className="text-[#CCA43D] text-[10px] md:text-xs tracking-[0.3em] uppercase mb-4 font-semibold inline-block">The Signature Standard</span>
                 <h2 className="text-3xl md:text-5xl font-serif text-white mb-6">Four Pillars of Perfection</h2>
                 <div className="w-16 h-[1px] bg-[#CCA43D] mx-auto mb-6" />
-                <p className="text-gray-400 text-xs md:text-sm font-light leading-relaxed tracking-wide">
+                <p className="premium-subtext text-center">
                   Our pursuit of unmatched brilliance is anchored upon four core values that define every commission and curation we deliver.
                 </p>
               </div>
@@ -276,7 +276,7 @@ export default function ClientPage({ config, products }: { config: any, products
                       <h3 className="text-lg md:text-xl font-serif text-white mb-4 group-hover:text-[#CCA43D] transition-colors duration-300">
                         {pillar.title}
                       </h3>
-                      <p className="text-gray-400 text-xs md:text-sm font-light leading-relaxed">
+                      <p className="premium-subtext">
                         {pillar.desc}
                       </p>
                     </div>
@@ -343,7 +343,7 @@ export default function ClientPage({ config, products }: { config: any, products
               <h2 id="product-title" className="text-2xl md:text-3xl font-serif mb-5 leading-tight">{selectedProduct.name}</h2>
               <div className="w-16 h-[1px] bg-gradient-to-r from-[#CCA43D]/60 to-transparent mb-7" />
               
-              <p className="text-gray-300 font-light leading-relaxed text-sm mb-12">
+              <p className="premium-subtext mb-12">
                 {selectedProduct.details}
               </p>
 
@@ -385,7 +385,7 @@ export default function ClientPage({ config, products }: { config: any, products
                 <span className="absolute top-4 right-6 text-[5rem] font-serif text-white/[0.03] leading-none select-none pointer-events-none group-hover:text-white/[0.06] transition-colors duration-700">{n}</span>
                 <div className="w-8 h-[1px] bg-[#CCA43D]/60 mb-6" />
                 <h3 className="text-2xl md:text-3xl font-serif mb-4 text-white">{title}</h3>
-                <p className="text-gray-400 leading-relaxed font-light text-sm">{body}</p>
+                <p className="premium-subtext">{body}</p>
               </div>
             ))}
           </div>
@@ -401,8 +401,8 @@ export default function ClientPage({ config, products }: { config: any, products
                 </div>
                 <h3 className="text-2xl font-serif mb-4 text-white">Natural Diamonds</h3>
                 <div className="w-12 h-[1px] bg-[#CCA43D] mb-6"></div>
-                <p className="text-gray-300 leading-relaxed font-light mb-6">Formed deep within the Earth over billions of years under extreme heat and pressure, natural diamonds are nature's ultimate miracle.</p>
-                <ul className="space-y-4 text-sm text-gray-400 font-light tracking-wide">
+                <p className="premium-subtext mb-6">Formed deep within the Earth over billions of years under extreme heat and pressure, natural diamonds are nature's ultimate miracle.</p>
+                <ul className="space-y-4 premium-subtext">
                   <li className="flex gap-3"><span className="text-[#CCA43D]">•</span> Holds long-term historic and intrinsic value</li>
                   <li className="flex gap-3"><span className="text-[#CCA43D]">•</span> Created over 1 to 3 billion years ago</li>
                   <li className="flex gap-3"><span className="text-[#CCA43D]">•</span> Finite supply makes each stone exceptionally rare</li>
@@ -415,8 +415,8 @@ export default function ClientPage({ config, products }: { config: any, products
                 </div>
                 <h3 className="text-2xl font-serif mb-4 text-white">Lab-Grown Diamonds</h3>
                 <div className="w-12 h-[1px] bg-[#CCA43D] mb-6"></div>
-                <p className="text-gray-300 leading-relaxed font-light mb-6">Created in highly controlled laboratory environments using advanced technological processes that duplicate the conditions under which diamonds naturally develop.</p>
-                <ul className="space-y-4 text-sm text-gray-400 font-light tracking-wide">
+                <p className="premium-subtext mb-6">Created in highly controlled laboratory environments using advanced technological processes that duplicate the conditions under which diamonds naturally develop.</p>
+                <ul className="space-y-4 premium-subtext">
                   <li className="flex gap-3"><span className="text-[#CCA43D]">•</span> Emotionally, chemically, optically identical to Natural</li>
                   <li className="flex gap-3"><span className="text-[#CCA43D]">•</span> Significantly more affordable, allowing for larger stones</li>
                   <li className="flex gap-3"><span className="text-[#CCA43D]">•</span> Environmentally sustainable and traceably conflict-free</li>
@@ -433,10 +433,14 @@ export default function ClientPage({ config, products }: { config: any, products
           <div className="text-center mb-20 md:mb-24">
             <h2 className="text-[#CCA43D] tracking-[0.2em] mb-4 text-sm uppercase font-semibold">Exquisite Craftsmanship</h2>
             <h1 className="text-4xl md:text-6xl font-serif">Masterpiece Collection</h1>
-            <div className="w-24 h-[1px] bg-[#CCA43D] mx-auto mt-8"></div>
+            <div className="w-24 h-[1px] bg-[#CCA43D] mx-auto mt-8 mb-8"></div>
+            <p className="premium-subtext text-center max-w-2xl mx-auto mb-10">
+              Discover our curated selections of fine jewelry, handcrafted in the diamond capital of the world.<br/>
+              Each individual masterwork represents three generations of aesthetic lineage and unparalleled expertise.
+            </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 px-4 md:px-0 stagger-children">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 px-4 md:px-0 stagger-children">
             <div onClick={() => openCollection("eternity-rings")} className="group cursor-pointer relative aspect-[2/3] overflow-hidden border border-[#1a1a1a] hover:border-[#CCA43D]/50 transition-colors">
               <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url(${config.collectionEternityRings || 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1500&auto=format&fit=crop'})` }}></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
@@ -505,11 +509,20 @@ export default function ClientPage({ config, products }: { config: any, products
           href={`https://wa.me/${contactPhoneRaw}?text=Hello%20Jainam%20Diamonds!%20I%20would%20like%20to%20know%20more%20about%20your%20collection.`}
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex items-center justify-center gap-4 py-5 px-6 border-b border-[#111] hover:bg-[#0d0d0d] transition-colors duration-300"
+          className="group flex items-center justify-center gap-4 py-6 px-6 bg-gradient-to-r from-[#CCA43D] to-[#E8C96B] hover:from-[#E8C96B] hover:to-[#F5D76E] transition-all duration-500 shadow-[0_4px_20px_rgba(204,164,61,0.25)] relative overflow-hidden"
         >
-          <svg className="w-4 h-4 text-[#CCA43D] flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M11.996 2C6.474 2 2 6.474 2 12c0 1.954.566 3.774 1.545 5.334L2 22l4.811-1.503C8.318 21.468 10.106 22 11.996 22 17.518 22 22 17.526 22 12c0-5.526-4.482-10-10.004-10zM12 20.301c-1.636 0-3.197-.432-4.576-1.24l-.328-.194-3.394 1.06 1.08-3.31-.212-.338C3.765 14.887 3.298 13.486 3.298 12 3.298 7.211 7.213 3.298 12.001 3.298 16.787 3.298 20.702 7.211 20.702 12c0 4.79-3.914 8.701-8.702 8.701zm4.783-6.526c-.262-.132-1.55-.765-1.79-.854-.239-.089-.413-.132-.587.132-.174.264-.678.854-.83 1.028-.152.175-.304.22-.566.089-1.29-.646-2.52-1.666-3.102-3.15-.152-.39-.016-.604.116-.736.118-.118.261-.305.393-.457.13-.153.174-.263.26-.438.087-.175.044-.329-.022-.46-.065-.132-.587-1.416-.805-1.938-.211-.51-.424-.442-.587-.45-.152-.008-.326-.008-.501-.008-.174 0-.457.065-.696.329-.239.263-.914.893-.914 2.179 0 1.286.936 2.531 1.066 2.706.13.175 1.846 2.817 4.473 3.95.626.269 1.115.429 1.497.55.628.2 1.201.17 1.65.103.504-.075 1.55-.633 1.768-1.244.218-.611.218-1.135.152-1.245-.065-.109-.239-.175-.501-.307z"/></svg>
-          <span className="text-[11px] tracking-[0.3em] uppercase text-gray-400 group-hover:text-[#CCA43D] transition-colors duration-300">Speak to a diamond expert — WhatsApp us now</span>
-          <svg className="w-3 h-3 text-[#CCA43D]/40 group-hover:text-[#CCA43D] group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+          {/* Shine animation overlay */}
+          <span className="absolute inset-0 bg-white/10 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out pointer-events-none" />
+          
+          <svg className="w-5 h-5 text-black flex-shrink-0 relative z-10 transition-transform duration-500 group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M11.996 2C6.474 2 2 6.474 2 12c0 1.954.566 3.774 1.545 5.334L2 22l4.811-1.503C8.318 21.468 10.106 22 11.996 22 17.518 22 22 17.526 22 12c0-5.526-4.482-10-10.004-10zM12 20.301c-1.636 0-3.197-.432-4.576-1.24l-.328-.194-3.394 1.06 1.08-3.31-.212-.338C3.765 14.887 3.298 13.486 3.298 12 3.298 7.211 7.213 3.298 12.001 3.298 16.787 3.298 20.702 7.211 20.702 12c0 4.79-3.914 8.701-8.702 8.701zm4.783-6.526c-.262-.132-1.55-.765-1.79-.854-.239-.089-.413-.132-.587.132-.174.264-.678.854-.83 1.028-.152.175-.304.22-.566.089-1.29-.646-2.52-1.666-3.102-3.15-.152-.39-.016-.604.116-.736.118-.118.261-.305.393-.457.13-.153.174-.263.26-.438.087-.175.044-.329-.022-.46-.065-.132-.587-1.416-.805-1.938-.211-.51-.424-.442-.587-.45-.152-.008-.326-.008-.501-.008-.174 0-.457.065-.696.329-.239.263-.914.893-.914 2.179 0 1.286.936 2.531 1.066 2.706.13.175 1.846 2.817 4.473 3.95.626.269 1.115.429 1.497.55.628.2 1.201.17 1.65.103.504-.075 1.55-.633 1.768-1.244.218-.611.218-1.135.152-1.245-.065-.109-.239-.175-.501-.307z"/>
+          </svg>
+          <span className="text-[12px] tracking-[0.25em] uppercase text-black font-semibold relative z-10 transition-colors duration-300">
+            Speak to a diamond expert — WhatsApp us now
+          </span>
+          <svg className="w-3.5 h-3.5 text-black relative z-10 group-hover:translate-x-1.5 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
         </a>
 
         {/* Main footer grid */}
@@ -518,14 +531,16 @@ export default function ClientPage({ config, products }: { config: any, products
 
             {/* Brand column */}
             <div className="flex flex-col gap-5 md:w-[40%] flex-shrink-0">
-              <div className="relative w-20 h-20 md:w-24 md:h-24">
-                <Image src="/logo.png" alt="Jainam Diamonds" fill className="object-contain" />
+              <div className="flex items-center gap-4">
+                <div className="relative w-16 h-16 md:w-20 md:h-20 flex-shrink-0">
+                  <Image src="/logo.png" alt="Jainam Diamonds Logo" fill className="object-contain" />
+                </div>
+                <div>
+                  <h2 className="gold-shimmer font-serif text-2xl md:text-3xl tracking-[0.12em] uppercase mb-1">Jainam Diamonds</h2>
+                  <p className="text-[#CCA43D]/70 text-[10px] md:text-xs tracking-[0.2em] uppercase">Surat · Diamond Capital of the World</p>
+                </div>
               </div>
-              <div>
-                <h2 className="gold-shimmer font-serif text-2xl md:text-3xl tracking-[0.12em] uppercase mb-2">Jainam Diamonds</h2>
-                <p className="text-[#CCA43D]/70 text-xs md:text-sm tracking-[0.25em] uppercase mb-4">Surat · Diamond Capital of the World</p>
-              </div>
-              <p className="text-gray-300 text-sm md:text-base leading-relaxed font-light">
+              <p className="premium-subtext">
                 Born in Surat — where 90% of the world's diamonds are cut. Every stone passes through three generations of trained eyes before it reaches you.
               </p>
               {/* Social icons */}
@@ -552,7 +567,7 @@ export default function ClientPage({ config, products }: { config: any, products
             </div>
 
             {/* Navigate column */}
-            <div className="flex-shrink-0 md:pt-32">
+            <div className="flex-shrink-0 md:pt-6">
               <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-[#CCA43D] mb-6 font-semibold">Navigate</p>
               <ul className="space-y-3">
                 {[
@@ -570,20 +585,20 @@ export default function ClientPage({ config, products }: { config: any, products
             </div>
 
             {/* Contact column */}
-            <div className="flex-shrink-0 md:pt-32">
+            <div className="flex-shrink-0 md:pt-6">
               <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-[#CCA43D] mb-6 font-semibold">Contact</p>
-              <ul className="space-y-4 text-sm font-light">
+              <ul className="space-y-4 premium-subtext">
                 <li className="flex items-start gap-3">
                   <svg className="w-3.5 h-3.5 text-[#CCA43D]/50 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                  <a href={`mailto:${config.contactEmail}`} className="text-gray-300 hover:text-[#CCA43D] transition-colors duration-300 break-all">{config.contactEmail}</a>
+                  <a href={`mailto:${config.contactEmail}`} className="hover:text-[#CCA43D] transition-colors duration-300 break-all">{config.contactEmail}</a>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-3.5 h-3.5 text-[#CCA43D]/50 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-                  <a href={`tel:${contactPhoneRaw}`} className="text-gray-300 hover:text-[#CCA43D] transition-colors duration-300">{config.contactPhone}</a>
+                  <a href={`tel:${contactPhoneRaw}`} className="hover:text-[#CCA43D] transition-colors duration-300">{config.contactPhone}</a>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-3.5 h-3.5 text-[#CCA43D]/50 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                  <span className="text-gray-300 leading-relaxed whitespace-pre-line">{config.contactAddress}</span>
+                  <span className="leading-relaxed whitespace-pre-line">{config.contactAddress}</span>
                 </li>
               </ul>
             </div>
