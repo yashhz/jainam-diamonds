@@ -104,17 +104,12 @@ export default function ClientPage({ config, products }: { config: any, products
             </div>
 
             {/* Diamonds Split */}
-            <div onClick={() => setView("diamonds")} className="w-full md:w-1/2 relative group cursor-pointer overflow-hidden bg-[#06090f] min-h-[50vh] md:min-h-screen">
+            <div onClick={() => setView("diamonds")} className="w-full md:w-1/2 relative group cursor-pointer overflow-hidden bg-black min-h-[50vh] md:min-h-screen">
               <div
-                className="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-out"
-                style={{ backgroundImage: `url(${config.heroDiamondImage || '/Diamond.jpg'})`, opacity: 0.55, transform: 'scale(1)' }}
-              />
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-out opacity-0 group-hover:opacity-100 scale-105"
+                className="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-out group-hover:scale-105"
                 style={{ backgroundImage: `url(${config.heroDiamondImage || '/Diamond.jpg'})` }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#06090f] via-[#06090f]/40 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#06090f]/60 to-transparent" />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500" />
               <div className="absolute inset-0 flex flex-col items-start justify-end pb-16 md:pb-24 px-8 md:px-14 z-20">
                 <p className="text-[#CCA43D] text-[12px] md:text-[14px] tracking-[0.4em] uppercase mb-4 font-semibold transition-all duration-500 group-hover:scale-105 group-hover:text-[#E8C96B] drop-shadow-[0_2px_10px_rgba(204,164,61,0.25)]">The Diamonds</p>
                 <h2 className="text-4xl md:text-7xl lg:text-8xl text-white font-serif leading-[0.9] mb-6 group-hover:-translate-y-2 transition-transform duration-700 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">Precision.<br/>Brilliance.</h2>
@@ -128,15 +123,10 @@ export default function ClientPage({ config, products }: { config: any, products
             {/* Jewelry Split */}
             <div onClick={() => setView("jewelry")} className="w-full md:w-1/2 relative group cursor-pointer overflow-hidden bg-[#100a05] min-h-[50vh] md:min-h-screen">
               <div
-                className="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-out"
-                style={{ backgroundImage: `url(${config.heroJewelryImage || 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=2000&auto=format&fit=crop'})`, opacity: 0.55 }}
-              />
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-out opacity-0 group-hover:opacity-100 scale-105"
+                className="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-out group-hover:scale-105"
                 style={{ backgroundImage: `url(${config.heroJewelryImage || 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=2000&auto=format&fit=crop'})` }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#100a05] via-[#100a05]/40 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-l from-[#100a05]/60 to-transparent" />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500" />
               <div className="absolute inset-0 flex flex-col items-end justify-end pb-16 md:pb-24 px-8 md:px-14 z-20 text-right">
                 <p className="text-[#CCA43D] text-[12px] md:text-[14px] tracking-[0.4em] uppercase mb-4 font-semibold transition-all duration-500 group-hover:scale-105 group-hover:text-[#E8C96B] drop-shadow-[0_2px_10px_rgba(204,164,61,0.25)]">Fine Jewelry</p>
                 <h2 className="text-4xl md:text-7xl lg:text-8xl text-white font-serif leading-[0.9] mb-6 group-hover:-translate-y-2 transition-transform duration-700 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">Worn.<br/>Cherished.</h2>
@@ -165,7 +155,6 @@ export default function ClientPage({ config, products }: { config: any, products
                       fill 
                       className="object-cover object-top transition-transform duration-[1200ms] group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#070707] via-transparent to-transparent" />
                   </div>
                   {/* Decorative corner accents */}
                   <div className="absolute top-2 left-2 w-4 h-4 border-t border-l border-[#CCA43D]/40" />
@@ -397,7 +386,7 @@ export default function ClientPage({ config, products }: { config: any, products
             <div className="flex flex-col md:flex-row gap-12 w-full max-w-5xl mx-auto text-left">
               <div className="flex-1 bg-[#050505] p-10 lg:p-14 border border-[#1a1a1a] hover:border-[#CCA43D]/30 transition-colors">
                 <div className="relative w-full h-64 mb-8 overflow-hidden rounded-sm">
-                  <Image src="https://images.unsplash.com/photo-1584346133934-a3afd2a33c4c?q=80&w=1500&auto=format&fit=crop" alt="Natural Diamonds" fill className="object-cover" />
+                  <Image src="/natural.jpg" alt="Natural Diamonds" fill className="object-cover transition-transform duration-[1200ms] hover:scale-105" />
                 </div>
                 <h3 className="text-2xl font-serif mb-4 text-white">Natural Diamonds</h3>
                 <div className="w-12 h-[1px] bg-[#CCA43D] mb-6"></div>
@@ -411,7 +400,7 @@ export default function ClientPage({ config, products }: { config: any, products
 
               <div className="flex-1 bg-[#050505] p-10 lg:p-14 border border-[#1a1a1a] hover:border-[#CCA43D]/30 transition-colors">
                 <div className="relative w-full h-64 mb-8 overflow-hidden rounded-sm">
-                  <Image src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1500&auto=format&fit=crop" alt="Lab Grown Diamonds" fill className="object-cover" />
+                  <Image src="/lab.jpg" alt="Lab Grown Diamonds" fill className="object-cover transition-transform duration-[1200ms] hover:scale-105" />
                 </div>
                 <h3 className="text-2xl font-serif mb-4 text-white">Lab-Grown Diamonds</h3>
                 <div className="w-12 h-[1px] bg-[#CCA43D] mb-6"></div>
