@@ -75,20 +75,20 @@ export default function ClientPage({ config, products }: { config: any, products
     <main className="min-h-screen flex flex-col bg-[#0a0a0a] text-white font-sans selection:bg-[#CCA43D] selection:text-black">
       {/* Dynamic Header */}
       {view !== "home" && (
-        <header className="w-full p-4 md:p-6 flex justify-between items-center border-b border-[#CCA43D]/25 animate-fade-in z-40 sticky top-0 bg-[#0a0a0a]/80 backdrop-blur-md">
+        <header className="w-full px-6 flex justify-between items-center border-b border-[#CCA43D]/25 animate-fade-in z-40 sticky top-0 bg-[#0a0a0a]/80 backdrop-blur-md h-16 md:h-20 relative">
           <button
             onClick={handleBack}
             aria-label="Go back to previous page"
-            className="text-[#CCA43D] hover:text-black hover:bg-[#CCA43D] transition-all duration-300 flex items-center gap-2 px-4 py-2 border border-[#CCA43D]/40 hover:border-[#CCA43D] rounded-sm group text-xs uppercase tracking-widest bg-black/50"
+            className="text-[#CCA43D] hover:text-black hover:bg-[#CCA43D] transition-all duration-300 flex items-center gap-2 px-4 py-2 border border-[#CCA43D]/40 hover:border-[#CCA43D] rounded-sm group text-xs uppercase tracking-widest bg-black/50 z-50"
           >
             <span className="transform group-hover:-translate-x-1 transition-transform">←</span> Back
           </button>
-          <div className="flex items-center gap-4 cursor-pointer transition-transform duration-500 hover:scale-105" onClick={() => setView("home")}>
-            <div className="relative w-24 h-24 md:w-32 md:h-32">
+          <div className="absolute left-1/2 -translate-x-1/2 top-2 md:top-3 z-50 pointer-events-none">
+            <div className="relative w-24 h-24 md:w-32 md:h-32 cursor-pointer pointer-events-auto transition-transform duration-500 hover:scale-105" onClick={() => setView("home")}>
               <Image src="/logo.png" alt="Jainam Diamonds" fill className="object-contain" priority />
             </div>
           </div>
-          <div className="w-[90px] md:w-[100px]"></div> {/* Spacer for perfect center alignment */}
+          <div className="w-[90px] md:w-[100px] z-0"></div> {/* Spacer for layout balance */}
         </header>
       )}
 
