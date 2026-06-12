@@ -75,7 +75,7 @@ export default function ClientPage({ config, products }: { config: any, products
     <main className="min-h-screen flex flex-col bg-[#0a0a0a] text-white font-sans selection:bg-[#CCA43D] selection:text-black">
       {/* Dynamic Header */}
       {view !== "home" && (
-        <header className="w-full p-6 flex justify-between items-center border-b border-[#CCA43D]/25 animate-fade-in z-40 sticky top-0 bg-[#0a0a0a]/80 backdrop-blur-md">
+        <header className="w-full p-4 md:p-6 flex justify-between items-center border-b border-[#CCA43D]/25 animate-fade-in z-40 sticky top-0 bg-[#0a0a0a]/80 backdrop-blur-md">
           <button
             onClick={handleBack}
             aria-label="Go back to previous page"
@@ -83,12 +83,12 @@ export default function ClientPage({ config, products }: { config: any, products
           >
             <span className="transform group-hover:-translate-x-1 transition-transform">←</span> Back
           </button>
-          <div className="flex items-center gap-4 cursor-pointer" onClick={() => setView("home")}>
-            <div className="relative w-16 h-16">
-              <Image src="/logo.png" alt="Jainam Diamonds" fill className="object-contain" />
+          <div className="flex items-center gap-4 cursor-pointer transition-transform duration-500 hover:scale-105" onClick={() => setView("home")}>
+            <div className="relative w-24 h-24 md:w-32 md:h-32">
+              <Image src="/logo.png" alt="Jainam Diamonds" fill className="object-contain" priority />
             </div>
           </div>
-          <div className="w-[60px]"></div> {/* Spacer for center alignment */}
+          <div className="w-[90px] md:w-[100px]"></div> {/* Spacer for perfect center alignment */}
         </header>
       )}
 
