@@ -456,7 +456,7 @@ export default function ClientPage({ config, products }: { config: any, products
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 px-4 md:px-0 stagger-children">
             <div onClick={() => openCollection("eternity-rings")} className="group cursor-pointer relative aspect-[2/3] overflow-hidden border border-[#CCA43D]/25 hover:border-[#CCA43D]/60 transition-colors">
-              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url(${config.collectionEternityRings || '/eternity ring photo.jpeg'})` }}></div>
+              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url('${config.collectionEternityRings || '/eternity ring photo.jpeg'}')` }}></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
               <div className="absolute bottom-0 left-0 p-4 w-full translate-y-4 group-hover:translate-y-0 transition-transform">
                 <h3 className="text-2xl md:text-3xl font-serif mb-2 text-white tracking-wide">Eternity Rings</h3>
@@ -466,7 +466,7 @@ export default function ClientPage({ config, products }: { config: any, products
             </div>
 
             <div onClick={() => openCollection("bridal-necklaces")} className="group cursor-pointer relative aspect-[2/3] overflow-hidden border border-[#CCA43D]/25 hover:border-[#CCA43D]/60 transition-colors">
-              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url(${config.collectionBridalNecklaces || '/bridal necklace.jpeg'})` }}></div>
+              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url('${config.collectionBridalNecklaces || '/bridal necklace.jpeg'}')` }}></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
               <div className="absolute bottom-0 left-0 p-4 w-full translate-y-4 group-hover:translate-y-0 transition-transform">
                 <h3 className="text-2xl md:text-3xl font-serif mb-2 text-white tracking-wide">Bridal Necklaces</h3>
@@ -476,7 +476,7 @@ export default function ClientPage({ config, products }: { config: any, products
             </div>
 
             <div onClick={() => openCollection("diamond-bracelets")} className="group cursor-pointer relative aspect-[2/3] overflow-hidden border border-[#CCA43D]/25 hover:border-[#CCA43D]/60 transition-colors">
-              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url(${config.collectionDiamondBracelets || '/diamond bracelet.jpeg'})` }}></div>
+              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url('${config.collectionDiamondBracelets || '/diamond bracelet.jpeg'}')` }}></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
               <div className="absolute bottom-0 left-0 p-4 w-full translate-y-4 group-hover:translate-y-0 transition-transform">
                 <h3 className="text-2xl md:text-3xl font-serif mb-2 text-white tracking-wide">Diamond Bracelets</h3>
@@ -486,7 +486,7 @@ export default function ClientPage({ config, products }: { config: any, products
             </div>
 
             <div onClick={() => openCollection("statement-earrings")} className="group cursor-pointer relative aspect-[2/3] overflow-hidden border border-[#CCA43D]/25 hover:border-[#CCA43D]/60 transition-colors">
-              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url(${config.collectionStatementEarrings || '/statement earrings.jpeg'})` }}></div>
+              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url('${config.collectionStatementEarrings || '/statement earrings.jpeg'}')` }}></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
               <div className="absolute bottom-0 left-0 p-4 w-full translate-y-4 group-hover:translate-y-0 transition-transform">
                 <h3 className="text-2xl md:text-3xl font-serif mb-2 text-white tracking-wide">Statement Earrings</h3>
@@ -496,7 +496,7 @@ export default function ClientPage({ config, products }: { config: any, products
             </div>
 
             <div onClick={() => openCollection("solitaire-pendants")} className="group cursor-pointer relative aspect-[2/3] overflow-hidden border border-[#CCA43D]/25 hover:border-[#CCA43D]/60 transition-colors">
-              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url(${config.collectionSolitairePendants || '/solitaire pendent.jpeg'})` }}></div>
+              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url('${config.collectionSolitairePendants || '/solitaire pendent.jpeg'}')` }}></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
               <div className="absolute bottom-0 left-0 p-4 w-full translate-y-4 group-hover:translate-y-0 transition-transform">
                 <h3 className="text-2xl md:text-3xl font-serif mb-2 text-white tracking-wide">Solitaire Pendants</h3>
