@@ -90,11 +90,11 @@ export default function MediaForm({ initialConfig }: { initialConfig: any }) {
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {[
-              { id: "collectionEternityRings", title: "Eternity Rings", fallback: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1500&auto=format&fit=crop" },
-              { id: "collectionBridalNecklaces", title: "Bridal Necklaces", fallback: "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=1500&auto=format&fit=crop" },
-              { id: "collectionDiamondBracelets", title: "Diamond Bracelets", fallback: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=1500&auto=format&fit=crop" },
-              { id: "collectionStatementEarrings", title: "Statement Earrings", fallback: "https://images.unsplash.com/photo-1629224316810-9d8805b95e76?q=80&w=1500&auto=format&fit=crop" },
-              { id: "collectionSolitairePendants", title: "Solitaire Pendants", fallback: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1500&auto=format&fit=crop" }
+              { id: "collectionEternityRings", title: "Eternity Rings", fallback: "/eternity ring photo.jpeg" },
+              { id: "collectionBridalNecklaces", title: "Bridal Necklaces", fallback: "/bridal necklace.jpeg" },
+              { id: "collectionDiamondBracelets", title: "Diamond Bracelets", fallback: "/diamond bracelet.jpeg" },
+              { id: "collectionStatementEarrings", title: "Statement Earrings", fallback: "/statement earrings.jpeg" },
+              { id: "collectionSolitairePendants", title: "Solitaire Pendants", fallback: "/solitaire pendent.jpeg" }
             ].map(item => (
                <div key={item.id} className="border border-[#1a1a1a] bg-[#0a0a0a] overflow-hidden rounded-sm group relative">
                  <div className="relative h-40 w-full overflow-hidden">

@@ -434,20 +434,29 @@ export default function ClientPage({ config, products }: { config: any, products
 
       {/* Jewelry Catalog View */}
       {view === "jewelry" && (
-        <div className="animate-slide-up w-full px-6 md:px-12 py-20 pb-32">
-          <div className="text-center mb-20 md:mb-24">
-            <h2 className="text-[#CCA43D] tracking-[0.2em] mb-4 text-sm uppercase font-semibold">Exquisite Craftsmanship</h2>
-            <h1 className="text-4xl md:text-6xl font-serif">Masterpiece Collection</h1>
-            <div className="w-24 h-[1px] bg-[#CCA43D] mx-auto mt-8 mb-8"></div>
-            <p className="premium-subtext text-center max-w-2xl mx-auto mb-10">
-              Discover our curated selections of fine jewelry, handcrafted in the diamond capital of the world.<br/>
-              Each individual masterwork represents three generations of aesthetic lineage and unparalleled expertise.
-            </p>
-          </div>
+        <div className="animate-slide-up w-full px-6 md:px-12 py-20 pb-32 relative overflow-hidden">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 opacity-20"
+            src="/jewellery page background.mp4"
+          />
+          <div className="relative z-10 max-w-7xl mx-auto">
+            <div className="text-center mb-20 md:mb-24">
+              <h2 className="text-[#CCA43D] tracking-[0.2em] mb-4 text-sm uppercase font-semibold">Exquisite Craftsmanship</h2>
+              <h1 className="text-4xl md:text-6xl font-serif">Masterpiece Collection</h1>
+              <div className="w-24 h-[1px] bg-[#CCA43D] mx-auto mt-8 mb-8"></div>
+              <p className="premium-subtext text-center max-w-2xl mx-auto mb-10">
+                Discover our curated selections of fine jewelry, handcrafted in the diamond capital of the world.<br/>
+                Each individual masterwork represents three generations of aesthetic lineage and unparalleled expertise.
+              </p>
+            </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 px-4 md:px-0 stagger-children">
             <div onClick={() => openCollection("eternity-rings")} className="group cursor-pointer relative aspect-[2/3] overflow-hidden border border-[#CCA43D]/25 hover:border-[#CCA43D]/60 transition-colors">
-              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url(${config.collectionEternityRings || 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1500&auto=format&fit=crop'})` }}></div>
+              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url(${config.collectionEternityRings || '/eternity ring photo.jpeg'})` }}></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
               <div className="absolute bottom-0 left-0 p-4 w-full translate-y-4 group-hover:translate-y-0 transition-transform">
                 <h3 className="text-2xl md:text-3xl font-serif mb-2 text-white tracking-wide">Eternity Rings</h3>
@@ -457,7 +466,7 @@ export default function ClientPage({ config, products }: { config: any, products
             </div>
 
             <div onClick={() => openCollection("bridal-necklaces")} className="group cursor-pointer relative aspect-[2/3] overflow-hidden border border-[#CCA43D]/25 hover:border-[#CCA43D]/60 transition-colors">
-              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url(${config.collectionBridalNecklaces || 'https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=1500&auto=format&fit=crop'})` }}></div>
+              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url(${config.collectionBridalNecklaces || '/bridal necklace.jpeg'})` }}></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
               <div className="absolute bottom-0 left-0 p-4 w-full translate-y-4 group-hover:translate-y-0 transition-transform">
                 <h3 className="text-2xl md:text-3xl font-serif mb-2 text-white tracking-wide">Bridal Necklaces</h3>
@@ -467,7 +476,7 @@ export default function ClientPage({ config, products }: { config: any, products
             </div>
 
             <div onClick={() => openCollection("diamond-bracelets")} className="group cursor-pointer relative aspect-[2/3] overflow-hidden border border-[#CCA43D]/25 hover:border-[#CCA43D]/60 transition-colors">
-              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url(${config.collectionDiamondBracelets || 'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=1500&auto=format&fit=crop'})` }}></div>
+              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url(${config.collectionDiamondBracelets || '/diamond bracelet.jpeg'})` }}></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
               <div className="absolute bottom-0 left-0 p-4 w-full translate-y-4 group-hover:translate-y-0 transition-transform">
                 <h3 className="text-2xl md:text-3xl font-serif mb-2 text-white tracking-wide">Diamond Bracelets</h3>
@@ -477,7 +486,7 @@ export default function ClientPage({ config, products }: { config: any, products
             </div>
 
             <div onClick={() => openCollection("statement-earrings")} className="group cursor-pointer relative aspect-[2/3] overflow-hidden border border-[#CCA43D]/25 hover:border-[#CCA43D]/60 transition-colors">
-              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url(${config.collectionStatementEarrings || 'https://images.unsplash.com/photo-1629224316810-9d8805b95e76?q=80&w=1500&auto=format&fit=crop'})` }}></div>
+              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url(${config.collectionStatementEarrings || '/statement earrings.jpeg'})` }}></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
               <div className="absolute bottom-0 left-0 p-4 w-full translate-y-4 group-hover:translate-y-0 transition-transform">
                 <h3 className="text-2xl md:text-3xl font-serif mb-2 text-white tracking-wide">Statement Earrings</h3>
@@ -487,7 +496,7 @@ export default function ClientPage({ config, products }: { config: any, products
             </div>
 
             <div onClick={() => openCollection("solitaire-pendants")} className="group cursor-pointer relative aspect-[2/3] overflow-hidden border border-[#CCA43D]/25 hover:border-[#CCA43D]/60 transition-colors">
-              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url(${config.collectionSolitairePendants || 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1500&auto=format&fit=crop'})` }}></div>
+              <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url(${config.collectionSolitairePendants || '/solitaire pendent.jpeg'})` }}></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
               <div className="absolute bottom-0 left-0 p-4 w-full translate-y-4 group-hover:translate-y-0 transition-transform">
                 <h3 className="text-2xl md:text-3xl font-serif mb-2 text-white tracking-wide">Solitaire Pendants</h3>
@@ -497,6 +506,7 @@ export default function ClientPage({ config, products }: { config: any, products
             </div>
 
 
+          </div>
           </div>
         </div>
       )}
