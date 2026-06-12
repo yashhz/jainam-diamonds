@@ -60,10 +60,10 @@ export default function ClientPage({ config, products }: { config: any, products
           >
             {WORDS[wordIdx]}
           </div>
-          <div className="w-48 md:w-64 h-[1px] bg-[#1a1a1a] relative overflow-hidden rounded-full">
+          <div className="w-48 md:w-64 h-[1px] bg-[#CCA43D]/25 relative overflow-hidden rounded-full">
             <div className="absolute inset-y-0 left-0 bg-gradient-to-r from-[#CCA43D] to-[#E8C96B] animate-progress-bar rounded-full" />
           </div>
-          <p className="text-xs text-gray-500 tracking-[0.25em] uppercase mt-4 animate-pulse">
+          <p className="text-xs text-[#E5D9B6]/70 tracking-[0.25em] uppercase mt-4 animate-pulse">
             Crafting your experience
           </p>
         </div>
@@ -75,11 +75,11 @@ export default function ClientPage({ config, products }: { config: any, products
     <main className="min-h-screen flex flex-col bg-[#0a0a0a] text-white font-sans selection:bg-[#CCA43D] selection:text-black">
       {/* Dynamic Header */}
       {view !== "home" && (
-        <header className="w-full p-6 flex justify-between items-center border-b border-[#1a1a1a] animate-fade-in z-40 sticky top-0 bg-[#0a0a0a]/80 backdrop-blur-md">
+        <header className="w-full p-6 flex justify-between items-center border-b border-[#CCA43D]/25 animate-fade-in z-40 sticky top-0 bg-[#0a0a0a]/80 backdrop-blur-md">
           <button
             onClick={handleBack}
             aria-label="Go back to previous page"
-            className="text-[#CCA43D] hover:text-white transition-colors duration-300 flex items-center gap-2 group text-sm uppercase tracking-widest"
+            className="text-[#CCA43D] hover:text-black hover:bg-[#CCA43D] transition-all duration-300 flex items-center gap-2 px-4 py-2 border border-[#CCA43D]/40 hover:border-[#CCA43D] rounded-sm group text-xs uppercase tracking-widest bg-black/50"
           >
             <span className="transform group-hover:-translate-x-1 transition-transform">←</span> Back
           </button>
@@ -105,9 +105,13 @@ export default function ClientPage({ config, products }: { config: any, products
 
             {/* Diamonds Split */}
             <div onClick={() => setView("diamonds")} className="w-full md:w-1/2 relative group cursor-pointer overflow-hidden bg-black min-h-[50vh] md:min-h-screen">
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-out group-hover:scale-105"
-                style={{ backgroundImage: `url(${config.heroDiamondImage || '/Diamond.jpg'})` }}
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-out group-hover:scale-105"
+                src="/main page precision.mp4"
               />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500" />
               <div className="absolute inset-0 flex flex-col items-start justify-end pb-16 md:pb-24 px-8 md:px-14 z-20">
@@ -121,10 +125,14 @@ export default function ClientPage({ config, products }: { config: any, products
             </div>
 
             {/* Jewelry Split */}
-            <div onClick={() => setView("jewelry")} className="w-full md:w-1/2 relative group cursor-pointer overflow-hidden bg-[#100a05] min-h-[50vh] md:min-h-screen">
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-out group-hover:scale-105"
-                style={{ backgroundImage: `url(${config.heroJewelryImage || 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=2000&auto=format&fit=crop'})` }}
+            <div onClick={() => setView("jewelry")} className="w-full md:w-1/2 relative group cursor-pointer overflow-hidden bg-black min-h-[50vh] md:min-h-screen">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-out group-hover:scale-105"
+                src="/main poage cherished fine jewellery.mp4"
               />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500" />
               <div className="absolute inset-0 flex flex-col items-end justify-end pb-16 md:pb-24 px-8 md:px-14 z-20 text-right">
@@ -139,15 +147,23 @@ export default function ClientPage({ config, products }: { config: any, products
           </div>
 
           {/* About Us & Founder Section */}
-          <section className="w-full bg-[#070707] py-24 md:py-32 px-6 md:px-12 border-t border-[#121212] relative overflow-hidden">
+          <section className="w-full bg-[#070707] py-24 md:py-32 px-6 md:px-12 border-t border-[#CCA43D]/25 relative overflow-hidden">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 opacity-20"
+              src="/background video 1.mp4"
+            />
             {/* Subtle background glow */}
-            <div className="absolute -left-48 top-1/4 w-96 h-96 rounded-full bg-[#CCA43D]/3 blur-[120px] pointer-events-none" />
-            <div className="absolute -right-48 bottom-1/4 w-96 h-96 rounded-full bg-[#CCA43D]/3 blur-[120px] pointer-events-none" />
+            <div className="absolute -left-48 top-1/4 w-96 h-96 rounded-full bg-[#CCA43D]/3 blur-[120px] pointer-events-none z-0" />
+            <div className="absolute -right-48 bottom-1/4 w-96 h-96 rounded-full bg-[#CCA43D]/3 blur-[120px] pointer-events-none z-0" />
 
             <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16 relative z-10">
               {/* Image / Graphic container */}
               <div className="w-full lg:w-5/12 flex flex-col gap-6 order-2 lg:order-1">
-                <div className="relative aspect-[4/5] w-full border border-[#1a1a1a] p-4 bg-[#0a0a0a]/50 backdrop-blur-sm group hover:border-[#CCA43D]/40 transition-all duration-500">
+                <div className="relative aspect-[4/5] w-full border border-[#CCA43D]/25 p-4 bg-[#0a0a0a]/50 backdrop-blur-sm group hover:border-[#CCA43D]/50 transition-all duration-500">
                   <div className="relative w-full h-full overflow-hidden">
                     <Image 
                       src="/founder.jpg" 
@@ -157,14 +173,14 @@ export default function ClientPage({ config, products }: { config: any, products
                     />
                   </div>
                   {/* Decorative corner accents */}
-                  <div className="absolute top-2 left-2 w-4 h-4 border-t border-l border-[#CCA43D]/40" />
-                  <div className="absolute top-2 right-2 w-4 h-4 border-t border-r border-[#CCA43D]/40" />
-                  <div className="absolute bottom-2 left-2 w-4 h-4 border-b border-l border-[#CCA43D]/40" />
-                  <div className="absolute bottom-2 right-2 w-4 h-4 border-b border-r border-[#CCA43D]/40" />
+                  <div className="absolute top-2 left-2 w-4 h-4 border-t border-l border-[#CCA43D]/50" />
+                  <div className="absolute top-2 right-2 w-4 h-4 border-t border-r border-[#CCA43D]/50" />
+                  <div className="absolute bottom-2 left-2 w-4 h-4 border-b border-l border-[#CCA43D]/50" />
+                  <div className="absolute bottom-2 right-2 w-4 h-4 border-b border-r border-[#CCA43D]/50" />
                 </div>
                 
                 {/* Founder Info Overlay Card */}
-                <div className="border border-[#1a1a1a] bg-[#0c0c0c]/80 backdrop-blur-sm p-6 text-center lg:text-left transition-all duration-500 hover:border-[#CCA43D]/30">
+                <div className="border border-[#CCA43D]/25 bg-[#0c0c0c]/80 backdrop-blur-sm p-6 text-center lg:text-left transition-all duration-500 hover:border-[#CCA43D]/45">
                   <p className="text-[10px] uppercase tracking-[0.25em] text-[#CCA43D] mb-1 font-semibold">Founder & Visionary</p>
                   <h4 className="text-xl font-serif text-white tracking-wide">Jainam Mehta</h4>
                   <div className="w-8 h-[1px] bg-[#CCA43D] my-3 mx-auto lg:mx-0" />
@@ -194,17 +210,17 @@ export default function ClientPage({ config, products }: { config: any, products
                   </p>
                 </div>
 
-                <div className="mt-10 flex flex-wrap gap-8 items-center pt-8 border-t border-[#1a1a1a]">
+                <div className="mt-10 flex flex-wrap gap-8 items-center pt-8 border-t border-[#CCA43D]/25">
                   <div>
                     <p className="text-3xl font-serif text-[#CCA43D]">3+</p>
                     <p className="text-[10px] uppercase tracking-widest mt-1 premium-subtext">Generations of Eyes</p>
                   </div>
-                  <div className="w-[1px] h-10 bg-[#1a1a1a]" />
+                  <div className="w-[1px] h-10 bg-[#CCA43D]/25" />
                   <div>
                     <p className="text-3xl font-serif text-[#CCA43D]">90%</p>
                     <p className="text-[10px] uppercase tracking-widest mt-1 premium-subtext">Surat Cut Advantage</p>
                   </div>
-                  <div className="w-[1px] h-10 bg-[#1a1a1a]" />
+                  <div className="w-[1px] h-10 bg-[#CCA43D]/25" />
                   <div>
                     <p className="text-3xl font-serif text-[#CCA43D]">100%</p>
                     <p className="text-[10px] uppercase tracking-widest mt-1 premium-subtext">Certified Integrity</p>
@@ -215,7 +231,7 @@ export default function ClientPage({ config, products }: { config: any, products
           </section>
 
           {/* Pillars of Excellence / Why Us Section */}
-          <section className="w-full bg-[#050505] py-24 md:py-32 px-6 md:px-12 border-t border-[#121212] relative overflow-hidden">
+          <section className="w-full bg-[#050505] py-24 md:py-32 px-6 md:px-12 border-t border-[#CCA43D]/25 relative overflow-hidden">
             {/* Ambient gold line across bg */}
             <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-[#CCA43D]/10 to-transparent" />
             
@@ -254,7 +270,7 @@ export default function ClientPage({ config, products }: { config: any, products
                 ].map((pillar) => (
                   <div 
                     key={pillar.num}
-                    className="luxury-card group border border-[#141414] hover:border-[#CCA43D]/30 bg-[#0a0a0a] p-8 transition-all duration-500 flex flex-col justify-between hover:-translate-y-1 relative animate-fade-in"
+                    className="luxury-card group border border-[#CCA43D]/25 hover:border-[#CCA43D]/50 bg-[#0a0a0a] p-8 transition-all duration-500 flex flex-col justify-between hover:-translate-y-1 relative animate-fade-in"
                   >
                     <div>
                       {/* Giant subtle roman numeral */}
@@ -289,7 +305,7 @@ export default function ClientPage({ config, products }: { config: any, products
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6 max-w-7xl mx-auto px-4 stagger-children">
             {products[activeCollection].products.map((product: any) => (
-              <div key={product.id} className="luxury-card group cursor-pointer border border-[#1a1a1a] hover:border-[#CCA43D]/40 bg-[#080808] flex flex-col animate-fade-in" onClick={() => setSelectedProduct(product)}>
+              <div key={product.id} className="luxury-card group cursor-pointer border border-[#CCA43D]/25 hover:border-[#CCA43D]/50 bg-[#080808] flex flex-col animate-fade-in" onClick={() => setSelectedProduct(product)}>
                 <div className="relative w-full aspect-[4/5] overflow-hidden">
                   <Image src={product.image} alt={product.name} fill className="object-cover group-hover:scale-115 transition-transform duration-700 ease-out" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
@@ -315,11 +331,11 @@ export default function ClientPage({ config, products }: { config: any, products
           aria-modal="true"
           aria-labelledby="product-title"
         >
-          <div className="relative w-full max-w-5xl bg-[#0a0a0a] border border-[#1a1a1a] flex flex-col md:flex-row shadow-2xl overflow-hidden animate-scale-in">
+          <div className="relative w-full max-w-5xl bg-[#0a0a0a] border border-[#CCA43D]/35 flex flex-col md:flex-row shadow-2xl overflow-hidden animate-scale-in">
             <button 
               onClick={() => setSelectedProduct(null)} 
               aria-label="Close product details"
-              className="absolute top-4 right-4 z-50 text-gray-500 hover:text-[#CCA43D] transition-all duration-300 bg-[#0a0a0a]/80 border border-[#1a1a1a] hover:border-[#CCA43D]/40 w-11 h-11 flex items-center justify-center text-xs hover:scale-105 active:scale-95"
+              className="absolute top-4 right-4 z-50 text-[#CCA43D] hover:text-black transition-all duration-300 bg-black/90 border border-[#CCA43D]/60 hover:border-[#CCA43D] hover:bg-[#CCA43D] w-10 h-10 flex items-center justify-center text-sm font-semibold hover:scale-105 active:scale-95 cursor-pointer"
             >✕</button>
 
             <div className="w-full md:w-1/2 relative h-56 md:h-auto min-h-[420px]">
@@ -370,7 +386,7 @@ export default function ClientPage({ config, products }: { config: any, products
               { n: '03', title: 'Clarity', body: 'Clarity is a record of a stone\'s journey through the Earth. We select only FL to VS grades — eye-clean stones with no visible inclusions to the naked eye. Immaculate, as every Jainam piece should be.' },
               { n: '04', title: 'Carat', body: 'Carat is weight, not size — and size is shaped by the cut. Whether a 0.5ct daily accent or a 5ct centrepiece, we match the right carat to the right cut so the stone wears larger than it weighs.' },
             ].map(({ n, title, body }) => (
-              <div key={n} className="luxury-card animate-fade-in relative group border border-[#1a1a1a] p-8 md:p-10 hover:border-[#CCA43D]/40 transition-colors duration-500 bg-[#0c0c0c] overflow-hidden">
+              <div key={n} className="luxury-card animate-fade-in relative group border border-[#CCA43D]/25 p-8 md:p-10 hover:border-[#CCA43D]/50 transition-colors duration-500 bg-[#0c0c0c] overflow-hidden">
                 <span className="absolute top-4 right-6 text-[5rem] font-serif text-white/[0.03] leading-none select-none pointer-events-none group-hover:text-white/[0.06] transition-colors duration-700">{n}</span>
                 <div className="w-8 h-[1px] bg-[#CCA43D]/60 mb-6" />
                 <h3 className="text-2xl md:text-3xl font-serif mb-4 text-white">{title}</h3>
@@ -379,12 +395,12 @@ export default function ClientPage({ config, products }: { config: any, products
             ))}
           </div>
 
-          <div className="mt-24 border-t border-[#1a1a1a] pt-24 text-center">
+          <div className="mt-24 border-t border-[#CCA43D]/25 pt-24 text-center">
             <h2 className="text-[#CCA43D] tracking-[0.2em] mb-4 text-sm uppercase font-semibold">The Origin</h2>
             <h1 className="text-3xl md:text-5xl font-serif mb-12">Natural vs. Lab-Grown Diamonds</h1>
 
             <div className="flex flex-col md:flex-row gap-12 w-full max-w-5xl mx-auto text-left">
-              <div className="flex-1 bg-[#050505] p-10 lg:p-14 border border-[#1a1a1a] hover:border-[#CCA43D]/30 transition-colors">
+              <div className="flex-1 bg-[#050505] p-10 lg:p-14 border border-[#CCA43D]/25 hover:border-[#CCA43D]/45 transition-colors">
                 <div className="relative w-full h-64 mb-8 overflow-hidden rounded-sm">
                   <Image src="/natural.jpg" alt="Natural Diamonds" fill className="object-cover transition-transform duration-[1200ms] hover:scale-105" />
                 </div>
@@ -398,7 +414,7 @@ export default function ClientPage({ config, products }: { config: any, products
                 </ul>
               </div>
 
-              <div className="flex-1 bg-[#050505] p-10 lg:p-14 border border-[#1a1a1a] hover:border-[#CCA43D]/30 transition-colors">
+              <div className="flex-1 bg-[#050505] p-10 lg:p-14 border border-[#CCA43D]/25 hover:border-[#CCA43D]/45 transition-colors">
                 <div className="relative w-full h-64 mb-8 overflow-hidden rounded-sm">
                   <Image src="/lab.jpg" alt="Lab Grown Diamonds" fill className="object-cover transition-transform duration-[1200ms] hover:scale-105" />
                 </div>
@@ -430,7 +446,7 @@ export default function ClientPage({ config, products }: { config: any, products
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 px-4 md:px-0 stagger-children">
-            <div onClick={() => openCollection("eternity-rings")} className="group cursor-pointer relative aspect-[2/3] overflow-hidden border border-[#1a1a1a] hover:border-[#CCA43D]/50 transition-colors">
+            <div onClick={() => openCollection("eternity-rings")} className="group cursor-pointer relative aspect-[2/3] overflow-hidden border border-[#CCA43D]/25 hover:border-[#CCA43D]/60 transition-colors">
               <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url(${config.collectionEternityRings || 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1500&auto=format&fit=crop'})` }}></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
               <div className="absolute bottom-0 left-0 p-4 w-full translate-y-4 group-hover:translate-y-0 transition-transform">
@@ -440,7 +456,7 @@ export default function ClientPage({ config, products }: { config: any, products
               </div>
             </div>
 
-            <div onClick={() => openCollection("bridal-necklaces")} className="group cursor-pointer relative aspect-[2/3] overflow-hidden border border-[#1a1a1a] hover:border-[#CCA43D]/50 transition-colors">
+            <div onClick={() => openCollection("bridal-necklaces")} className="group cursor-pointer relative aspect-[2/3] overflow-hidden border border-[#CCA43D]/25 hover:border-[#CCA43D]/60 transition-colors">
               <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url(${config.collectionBridalNecklaces || 'https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=1500&auto=format&fit=crop'})` }}></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
               <div className="absolute bottom-0 left-0 p-4 w-full translate-y-4 group-hover:translate-y-0 transition-transform">
@@ -450,7 +466,7 @@ export default function ClientPage({ config, products }: { config: any, products
               </div>
             </div>
 
-            <div onClick={() => openCollection("diamond-bracelets")} className="group cursor-pointer relative aspect-[2/3] overflow-hidden border border-[#1a1a1a] hover:border-[#CCA43D]/50 transition-colors">
+            <div onClick={() => openCollection("diamond-bracelets")} className="group cursor-pointer relative aspect-[2/3] overflow-hidden border border-[#CCA43D]/25 hover:border-[#CCA43D]/60 transition-colors">
               <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url(${config.collectionDiamondBracelets || 'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=1500&auto=format&fit=crop'})` }}></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
               <div className="absolute bottom-0 left-0 p-4 w-full translate-y-4 group-hover:translate-y-0 transition-transform">
@@ -460,7 +476,7 @@ export default function ClientPage({ config, products }: { config: any, products
               </div>
             </div>
 
-            <div onClick={() => openCollection("statement-earrings")} className="group cursor-pointer relative aspect-[2/3] overflow-hidden border border-[#1a1a1a] hover:border-[#CCA43D]/50 transition-colors">
+            <div onClick={() => openCollection("statement-earrings")} className="group cursor-pointer relative aspect-[2/3] overflow-hidden border border-[#CCA43D]/25 hover:border-[#CCA43D]/60 transition-colors">
               <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url(${config.collectionStatementEarrings || 'https://images.unsplash.com/photo-1629224316810-9d8805b95e76?q=80&w=1500&auto=format&fit=crop'})` }}></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
               <div className="absolute bottom-0 left-0 p-4 w-full translate-y-4 group-hover:translate-y-0 transition-transform">
@@ -470,7 +486,7 @@ export default function ClientPage({ config, products }: { config: any, products
               </div>
             </div>
 
-            <div onClick={() => openCollection("solitaire-pendants")} className="group cursor-pointer relative aspect-[2/3] overflow-hidden border border-[#1a1a1a] hover:border-[#CCA43D]/50 transition-colors">
+            <div onClick={() => openCollection("solitaire-pendants")} className="group cursor-pointer relative aspect-[2/3] overflow-hidden border border-[#CCA43D]/25 hover:border-[#CCA43D]/60 transition-colors">
               <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style={{ backgroundImage: `url(${config.collectionSolitairePendants || 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1500&auto=format&fit=crop'})` }}></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
               <div className="absolute bottom-0 left-0 p-4 w-full translate-y-4 group-hover:translate-y-0 transition-transform">
@@ -564,7 +580,7 @@ export default function ClientPage({ config, products }: { config: any, products
                   { label: 'Fine Jewelry', action: () => setView('jewelry') },
                 ].map(({ label, action }) => (
                   <li key={label}>
-                    <button onClick={action} className="text-gray-300 hover:text-[#CCA43D] text-sm font-light tracking-wide transition-colors duration-300 text-left group flex items-center gap-2">
+                    <button onClick={action} className="text-[#E5D9B6]/80 hover:text-[#CCA43D] text-sm font-light tracking-wide transition-colors duration-300 text-left group flex items-center gap-2">
                       <span className="w-0 h-[1px] bg-[#CCA43D] group-hover:w-3 transition-all duration-300 inline-block" />
                       {label}
                     </button>
@@ -596,9 +612,9 @@ export default function ClientPage({ config, products }: { config: any, products
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-[#1a1a1a] px-6 md:px-10 py-5">
+        <div className="border-t border-[#CCA43D]/25 px-6 md:px-10 py-5">
           <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3">
-            <p className="text-gray-500 text-[11px] tracking-[0.2em] uppercase">
+            <p className="text-[#E5D9B6]/50 text-[11px] tracking-[0.2em] uppercase">
               &copy; {new Date().getFullYear()} Jainam Diamonds — All rights reserved
             </p>
 
