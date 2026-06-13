@@ -49,7 +49,8 @@ export default function ClientPage({ config, products }: { config: any, products
 
   const handleVideoTimeUpdate = (e: React.SyntheticEvent<HTMLVideoElement>) => {
     const video = e.currentTarget;
-    if (video.duration && video.currentTime >= video.duration - 4) {
+    const trimSeconds = Number(video.getAttribute("data-trim")) || 4;
+    if (video.duration && video.currentTime >= video.duration - trimSeconds) {
       video.currentTime = 0;
       video.play().catch(() => {});
     }
@@ -387,6 +388,7 @@ export default function ClientPage({ config, products }: { config: any, products
             className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 opacity-20"
             src="/diamoand page.mp4"
             onTimeUpdate={handleVideoTimeUpdate}
+            data-trim="6"
           />
           <div className="relative z-10 max-w-6xl mx-auto">
             {/* ... knowledge base content identical to original ... */}
