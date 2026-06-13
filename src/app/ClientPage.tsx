@@ -121,7 +121,7 @@ export default function ClientPage({ config, products }: { config: any, products
                 className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-out group-hover:scale-105"
                 src="/main page precision.mp4"
                 onTimeUpdate={handleVideoTimeUpdate}
-                data-trim="3"
+                data-trim="6"
               />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500" />
               <div className="absolute inset-0 flex flex-col items-start justify-end pb-16 md:pb-24 px-8 md:px-14 z-20">
@@ -155,6 +155,67 @@ export default function ClientPage({ config, products }: { config: any, products
               </div>
             </div>
           </div>
+
+          {/* Pillars of Excellence / Why Us Section */}
+          <section className="w-full bg-[#050505] py-24 md:py-32 px-6 md:px-12 border-t border-[#CCA43D]/25 relative overflow-hidden">
+            {/* Ambient gold line across bg */}
+            <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-[#CCA43D]/10 to-transparent" />
+            
+            <div className="max-w-6xl mx-auto relative z-10">
+              <div className="text-center max-w-2xl mx-auto mb-20">
+                <span className="text-[#CCA43D] text-[10px] md:text-xs tracking-[0.3em] uppercase mb-4 font-semibold inline-block">The Signature Standard</span>
+                <h2 className="text-3xl md:text-5xl font-serif text-white mb-6">Four Pillars of Perfection</h2>
+                <div className="w-16 h-[1px] bg-[#CCA43D] mx-auto mb-6" />
+                <p className="premium-subtext text-center">
+                  Our pursuit of unmatched brilliance is anchored upon four core values that define every commission and curation we deliver.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 stagger-children">
+                {[
+                  {
+                    num: "I",
+                    title: "Surat Craft Heritage",
+                    desc: "Harnessing the immense prestige of Surat, the unparalleled diamond-cutting nucleus of the planet. Generational masters finish each facet with unmatched mathematical precision."
+                  },
+                  {
+                    num: "II",
+                    title: "Bespoke Consultation",
+                    desc: "We align with your distinct creative desires. Every major piece undergoes personal curation directly under Jainam Mehta, ensuring your jewelry is entirely unique."
+                  },
+                  {
+                    num: "III",
+                    title: "Ethical Provenance",
+                    desc: "Pure trust. Every natural and lab-grown diamond we represent is responsibly sourced, certified conflict-free, and graded by world-renowned gemological laboratories."
+                  },
+                  {
+                    num: "IV",
+                    title: "Optic Fire Engineering",
+                    desc: "Beyond generic dimensions. We select stones graded only with ultimate light dispersion potential, ensuring spectacular fire, brilliance, and scintillation under all lighting."
+                  }
+                ].map((pillar) => (
+                  <div 
+                    key={pillar.num}
+                    className="luxury-card group border border-[#CCA43D]/25 hover:border-[#CCA43D]/50 bg-[#0a0a0a] p-8 transition-all duration-500 flex flex-col justify-between hover:-translate-y-1 relative animate-fade-in"
+                  >
+                    <div>
+                      {/* Giant subtle roman numeral */}
+                      <span className="text-[4rem] font-serif text-white/[0.02] group-hover:text-white/[0.04] transition-colors duration-500 absolute top-4 right-6 select-none pointer-events-none">
+                        {pillar.num}
+                      </span>
+                      <div className="w-8 h-[1px] bg-[#CCA43D]/50 mb-8 group-hover:w-16 transition-all duration-500" />
+                      <h3 className="text-lg md:text-xl font-serif text-white mb-4 group-hover:text-[#CCA43D] transition-colors duration-300">
+                        {pillar.title}
+                      </h3>
+                      <p className="premium-subtext">
+                        {pillar.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
 
           {/* About Us & Founder Section */}
           <section className="w-full bg-[#070707] py-24 md:py-32 px-6 md:px-12 border-t border-[#CCA43D]/25 relative overflow-hidden">
@@ -236,67 +297,6 @@ export default function ClientPage({ config, products }: { config: any, products
                     <p className="text-[10px] uppercase tracking-[0.25em] mt-1 text-champagne/80 font-medium">Certified Integrity</p>
                   </div>
                 </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Pillars of Excellence / Why Us Section */}
-          <section className="w-full bg-[#050505] py-24 md:py-32 px-6 md:px-12 border-t border-[#CCA43D]/25 relative overflow-hidden">
-            {/* Ambient gold line across bg */}
-            <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-[#CCA43D]/10 to-transparent" />
-            
-            <div className="max-w-6xl mx-auto relative z-10">
-              <div className="text-center max-w-2xl mx-auto mb-20">
-                <span className="text-[#CCA43D] text-[10px] md:text-xs tracking-[0.3em] uppercase mb-4 font-semibold inline-block">The Signature Standard</span>
-                <h2 className="text-3xl md:text-5xl font-serif text-white mb-6">Four Pillars of Perfection</h2>
-                <div className="w-16 h-[1px] bg-[#CCA43D] mx-auto mb-6" />
-                <p className="premium-subtext text-center">
-                  Our pursuit of unmatched brilliance is anchored upon four core values that define every commission and curation we deliver.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 stagger-children">
-                {[
-                  {
-                    num: "I",
-                    title: "Surat Craft Heritage",
-                    desc: "Harnessing the immense prestige of Surat, the unparalleled diamond-cutting nucleus of the planet. Generational masters finish each facet with unmatched mathematical precision."
-                  },
-                  {
-                    num: "II",
-                    title: "Bespoke Consultation",
-                    desc: "We align with your distinct creative desires. Every major piece undergoes personal curation directly under Jainam Mehta, ensuring your jewelry is entirely unique."
-                  },
-                  {
-                    num: "III",
-                    title: "Ethical Provenance",
-                    desc: "Pure trust. Every natural and lab-grown diamond we represent is responsibly sourced, certified conflict-free, and graded by world-renowned gemological laboratories."
-                  },
-                  {
-                    num: "IV",
-                    title: "Optic Fire Engineering",
-                    desc: "Beyond generic dimensions. We select stones graded only with ultimate light dispersion potential, ensuring spectacular fire, brilliance, and scintillation under all lighting."
-                  }
-                ].map((pillar) => (
-                  <div 
-                    key={pillar.num}
-                    className="luxury-card group border border-[#CCA43D]/25 hover:border-[#CCA43D]/50 bg-[#0a0a0a] p-8 transition-all duration-500 flex flex-col justify-between hover:-translate-y-1 relative animate-fade-in"
-                  >
-                    <div>
-                      {/* Giant subtle roman numeral */}
-                      <span className="text-[4rem] font-serif text-white/[0.02] group-hover:text-white/[0.04] transition-colors duration-500 absolute top-4 right-6 select-none pointer-events-none">
-                        {pillar.num}
-                      </span>
-                      <div className="w-8 h-[1px] bg-[#CCA43D]/50 mb-8 group-hover:w-16 transition-all duration-500" />
-                      <h3 className="text-lg md:text-xl font-serif text-white mb-4 group-hover:text-[#CCA43D] transition-colors duration-300">
-                        {pillar.title}
-                      </h3>
-                      <p className="premium-subtext">
-                        {pillar.desc}
-                      </p>
-                    </div>
-                  </div>
-                ))}
               </div>
             </div>
           </section>
