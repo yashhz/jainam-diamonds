@@ -371,61 +371,71 @@ export default function ClientPage({ config, products }: { config: any, products
 
       {/* Diamonds View */}
       {view === "diamonds" && (
-        <div className="animate-slide-up max-w-6xl mx-auto px-6 py-20 pb-32">
-          {/* ... knowledge base content identical to original ... */}
-          <div className="text-center mb-20">
-            <h2 className="text-[#CCA43D] tracking-[0.2em] mb-4 text-sm uppercase font-semibold">Knowledge Base</h2>
-            <h1 className="text-4xl md:text-6xl font-serif">The 4 C's of Diamonds</h1>
-            <div className="w-24 h-[1px] bg-[#CCA43D] mx-auto mt-8"></div>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 stagger-children">
-            {[
-              { n: '01', title: 'Cut', body: 'The cut is the only C determined by human hands — and the most critical. We source only Excellent and Ideal grade cuts: Round Brilliant, Princess, Emerald, Oval. Every facet positioned to return light at its most breathtaking angle.' },
-              { n: '02', title: 'Color', body: 'Color in diamonds is measured by its absence. Our curated selection sits between D–F (Colorless) and G–H (Near Colorless) — stones so clear they appear to freeze light itself. Nothing warm, nothing yellow.' },
-              { n: '03', title: 'Clarity', body: 'Clarity is a record of a stone\'s journey through the Earth. We select only FL to VS grades — eye-clean stones with no visible inclusions to the naked eye. Immaculate, as every Jainam piece should be.' },
-              { n: '04', title: 'Carat', body: 'Carat is weight, not size — and size is shaped by the cut. Whether a 0.5ct daily accent or a 5ct centrepiece, we match the right carat to the right cut so the stone wears larger than it weighs.' },
-            ].map(({ n, title, body }) => (
-              <div key={n} className="luxury-card animate-fade-in relative group border border-[#CCA43D]/25 p-8 md:p-10 hover:border-[#CCA43D]/50 transition-colors duration-500 bg-[#0c0c0c] overflow-hidden">
-                <span className="absolute top-4 right-6 text-[5rem] font-serif text-white/[0.03] leading-none select-none pointer-events-none group-hover:text-white/[0.06] transition-colors duration-700">{n}</span>
-                <div className="w-8 h-[1px] bg-[#CCA43D]/60 mb-6" />
-                <h3 className="text-2xl md:text-3xl font-serif mb-4 text-white">{title}</h3>
-                <p className="premium-subtext">{body}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-24 border-t border-[#CCA43D]/25 pt-24 text-center">
-            <h2 className="text-[#CCA43D] tracking-[0.2em] mb-4 text-sm uppercase font-semibold">The Origin</h2>
-            <h1 className="text-3xl md:text-5xl font-serif mb-12">Natural vs. Lab-Grown Diamonds</h1>
-
-            <div className="flex flex-col md:flex-row gap-12 w-full max-w-5xl mx-auto text-left">
-              <div className="flex-1 bg-[#050505] p-10 lg:p-14 border border-[#CCA43D]/25 hover:border-[#CCA43D]/45 transition-colors">
-                <div className="relative w-full h-64 mb-8 overflow-hidden rounded-sm">
-                  <Image src="/natural.jpg" alt="Natural Diamonds" fill className="object-cover transition-transform duration-[1200ms] hover:scale-105" />
+        <div className="animate-slide-up w-full px-6 md:px-12 py-20 pb-32 relative overflow-hidden">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 opacity-20"
+            src="/diamoand page.mp4"
+          />
+          <div className="relative z-10 max-w-6xl mx-auto">
+            {/* ... knowledge base content identical to original ... */}
+            <div className="text-center mb-20">
+              <h2 className="text-[#CCA43D] tracking-[0.2em] mb-4 text-sm uppercase font-semibold">Knowledge Base</h2>
+              <h1 className="text-4xl md:text-6xl font-serif">The 4 C's of Diamonds</h1>
+              <div className="w-24 h-[1px] bg-[#CCA43D] mx-auto mt-8"></div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 stagger-children">
+              {[
+                { n: '01', title: 'Cut', body: 'The cut is the only C determined by human hands — and the most critical. We source only Excellent and Ideal grade cuts: Round Brilliant, Princess, Emerald, Oval. Every facet positioned to return light at its most breathtaking angle.' },
+                { n: '02', title: 'Color', body: 'Color in diamonds is measured by its absence. Our curated selection sits between D–F (Colorless) and G–H (Near Colorless) — stones so clear they appear to freeze light itself. Nothing warm, nothing yellow.' },
+                { n: '03', title: 'Clarity', body: 'Clarity is a record of a stone\'s journey through the Earth. We select only FL to VS grades — eye-clean stones with no visible inclusions to the naked eye. Immaculate, as every Jainam piece should be.' },
+                { n: '04', title: 'Carat', body: 'Carat is weight, not size — and size is shaped by the cut. Whether a 0.5ct daily accent or a 5ct centrepiece, we match the right carat to the right cut so the stone wears larger than it weighs.' },
+              ].map(({ n, title, body }) => (
+                <div key={n} className="luxury-card animate-fade-in relative group border border-[#CCA43D]/25 p-8 md:p-10 hover:border-[#CCA43D]/50 transition-colors duration-500 bg-[#0c0c0c] overflow-hidden">
+                  <span className="absolute top-4 right-6 text-[5rem] font-serif text-white/[0.03] leading-none select-none pointer-events-none group-hover:text-white/[0.06] transition-colors duration-700">{n}</span>
+                  <div className="w-8 h-[1px] bg-[#CCA43D]/60 mb-6" />
+                  <h3 className="text-2xl md:text-3xl font-serif mb-4 text-white">{title}</h3>
+                  <p className="premium-subtext">{body}</p>
                 </div>
-                <h3 className="text-2xl font-serif mb-4 text-white">Natural Diamonds</h3>
-                <div className="w-12 h-[1px] bg-[#CCA43D] mb-6"></div>
-                <p className="premium-subtext mb-6">Formed deep within the Earth over billions of years under extreme heat and pressure, natural diamonds are nature's ultimate miracle.</p>
-                <ul className="space-y-4 premium-subtext">
-                  <li className="flex gap-3"><span className="text-[#CCA43D]">•</span> Holds long-term historic and intrinsic value</li>
-                  <li className="flex gap-3"><span className="text-[#CCA43D]">•</span> Created over 1 to 3 billion years ago</li>
-                  <li className="flex gap-3"><span className="text-[#CCA43D]">•</span> Finite supply makes each stone exceptionally rare</li>
-                </ul>
-              </div>
+              ))}
+            </div>
 
-              <div className="flex-1 bg-[#050505] p-10 lg:p-14 border border-[#CCA43D]/25 hover:border-[#CCA43D]/45 transition-colors">
-                <div className="relative w-full h-64 mb-8 overflow-hidden rounded-sm">
-                  <Image src="/lab.jpg" alt="Lab Grown Diamonds" fill className="object-cover transition-transform duration-[1200ms] hover:scale-105" />
+            <div className="mt-24 border-t border-[#CCA43D]/25 pt-24 text-center">
+              <h2 className="text-[#CCA43D] tracking-[0.2em] mb-4 text-sm uppercase font-semibold">The Origin</h2>
+              <h1 className="text-3xl md:text-5xl font-serif mb-12">Natural vs. Lab-Grown Diamonds</h1>
+
+              <div className="flex flex-col md:flex-row gap-12 w-full max-w-5xl mx-auto text-left">
+                <div className="flex-1 bg-[#050505] p-10 lg:p-14 border border-[#CCA43D]/25 hover:border-[#CCA43D]/45 transition-colors">
+                  <div className="relative w-full h-64 mb-8 overflow-hidden rounded-sm">
+                    <Image src="/natural.jpg" alt="Natural Diamonds" fill className="object-cover transition-transform duration-[1200ms] hover:scale-105" />
+                  </div>
+                  <h3 className="text-2xl font-serif mb-4 text-white">Natural Diamonds</h3>
+                  <div className="w-12 h-[1px] bg-[#CCA43D] mb-6"></div>
+                  <p className="premium-subtext mb-6">Formed deep within the Earth over billions of years under extreme heat and pressure, natural diamonds are nature's ultimate miracle.</p>
+                  <ul className="space-y-4 premium-subtext">
+                    <li className="flex gap-3"><span className="text-[#CCA43D]">•</span> Holds long-term historic and intrinsic value</li>
+                    <li className="flex gap-3"><span className="text-[#CCA43D]">•</span> Created over 1 to 3 billion years ago</li>
+                    <li className="flex gap-3"><span className="text-[#CCA43D]">•</span> Finite supply makes each stone exceptionally rare</li>
+                  </ul>
                 </div>
-                <h3 className="text-2xl font-serif mb-4 text-white">Lab-Grown Diamonds</h3>
-                <div className="w-12 h-[1px] bg-[#CCA43D] mb-6"></div>
-                <p className="premium-subtext mb-6">Created in highly controlled laboratory environments using advanced technological processes that duplicate the conditions under which diamonds naturally develop.</p>
-                <ul className="space-y-4 premium-subtext">
-                  <li className="flex gap-3"><span className="text-[#CCA43D]">•</span> Emotionally, chemically, optically identical to Natural</li>
-                  <li className="flex gap-3"><span className="text-[#CCA43D]">•</span> Significantly more affordable, allowing for larger stones</li>
-                  <li className="flex gap-3"><span className="text-[#CCA43D]">•</span> Environmentally sustainable and traceably conflict-free</li>
-                </ul>
+
+                <div className="flex-1 bg-[#050505] p-10 lg:p-14 border border-[#CCA43D]/25 hover:border-[#CCA43D]/45 transition-colors">
+                  <div className="relative w-full h-64 mb-8 overflow-hidden rounded-sm">
+                    <Image src="/lab.jpg" alt="Lab Grown Diamonds" fill className="object-cover transition-transform duration-[1200ms] hover:scale-105" />
+                  </div>
+                  <h3 className="text-2xl font-serif mb-4 text-white">Lab-Grown Diamonds</h3>
+                  <div className="w-12 h-[1px] bg-[#CCA43D] mb-6"></div>
+                  <p className="premium-subtext mb-6">Created in highly controlled laboratory environments using advanced technological processes that duplicate the conditions under which diamonds naturally develop.</p>
+                  <ul className="space-y-4 premium-subtext">
+                    <li className="flex gap-3"><span className="text-[#CCA43D]">•</span> Emotionally, chemically, optically identical to Natural</li>
+                    <li className="flex gap-3"><span className="text-[#CCA43D]">•</span> Significantly more affordable, allowing for larger stones</li>
+                    <li className="flex gap-3"><span className="text-[#CCA43D]">•</span> Environmentally sustainable and traceably conflict-free</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
