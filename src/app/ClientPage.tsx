@@ -47,6 +47,14 @@ export default function ClientPage({ config, products }: { config: any, products
 
   const contactPhoneRaw = config.contactPhone?.replace(/[^0-9]/g, "") || "919737263395";
 
+  const handleVideoTimeUpdate = (e: React.SyntheticEvent<HTMLVideoElement>) => {
+    const video = e.currentTarget;
+    if (video.duration && video.currentTime >= video.duration - 4) {
+      video.currentTime = 0;
+      video.play().catch(() => {});
+    }
+  };
+
   if (view === "loading") {
     return (
       <div className="flex h-screen w-full flex-col items-center justify-center bg-[#0a0a0a] overflow-hidden">
@@ -107,11 +115,11 @@ export default function ClientPage({ config, products }: { config: any, products
             <div onClick={() => setView("diamonds")} className="w-full md:w-1/2 relative group cursor-pointer overflow-hidden bg-black min-h-[50vh] md:min-h-screen">
               <video
                 autoPlay
-                loop
                 muted
                 playsInline
                 className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-out group-hover:scale-105"
                 src="/main page precision.mp4"
+                onTimeUpdate={handleVideoTimeUpdate}
               />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500" />
               <div className="absolute inset-0 flex flex-col items-start justify-end pb-16 md:pb-24 px-8 md:px-14 z-20">
@@ -128,11 +136,11 @@ export default function ClientPage({ config, products }: { config: any, products
             <div onClick={() => setView("jewelry")} className="w-full md:w-1/2 relative group cursor-pointer overflow-hidden bg-black min-h-[50vh] md:min-h-screen">
               <video
                 autoPlay
-                loop
                 muted
                 playsInline
                 className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-out group-hover:scale-105"
                 src="/main poage cherished fine jewellery.mp4"
+                onTimeUpdate={handleVideoTimeUpdate}
               />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500" />
               <div className="absolute inset-0 flex flex-col items-end justify-end pb-16 md:pb-24 px-8 md:px-14 z-20 text-right">
@@ -150,11 +158,11 @@ export default function ClientPage({ config, products }: { config: any, products
           <section className="w-full bg-[#070707] py-24 md:py-32 px-6 md:px-12 border-t border-[#CCA43D]/25 relative overflow-hidden">
             <video
               autoPlay
-              loop
               muted
               playsInline
               className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 opacity-20"
               src="/background video 1.mp4"
+              onTimeUpdate={handleVideoTimeUpdate}
             />
             {/* Subtle background glow */}
             <div className="absolute -left-48 top-1/4 w-96 h-96 rounded-full bg-[#CCA43D]/3 blur-[120px] pointer-events-none z-0" />
@@ -374,11 +382,11 @@ export default function ClientPage({ config, products }: { config: any, products
         <div className="animate-slide-up w-full px-6 md:px-12 py-20 pb-32 relative overflow-hidden">
           <video
             autoPlay
-            loop
             muted
             playsInline
             className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 opacity-20"
             src="/diamoand page.mp4"
+            onTimeUpdate={handleVideoTimeUpdate}
           />
           <div className="relative z-10 max-w-6xl mx-auto">
             {/* ... knowledge base content identical to original ... */}
@@ -447,11 +455,11 @@ export default function ClientPage({ config, products }: { config: any, products
         <div className="animate-slide-up w-full px-6 md:px-12 py-20 pb-32 relative overflow-hidden">
           <video
             autoPlay
-            loop
             muted
             playsInline
             className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 opacity-20"
             src="/jewellery page background.mp4"
+            onTimeUpdate={handleVideoTimeUpdate}
           />
           <div className="relative z-10 max-w-7xl mx-auto">
             <div className="text-center mb-20 md:mb-24">
