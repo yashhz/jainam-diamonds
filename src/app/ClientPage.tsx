@@ -208,7 +208,7 @@ export default function ClientPage({ config, products }: { config: any, products
                 
                 <div className="space-y-6 premium-subtext">
                   <p>
-                    Established on the principles of immaculate precision and timeless luxury, <strong className="text-white font-semibold">Jainam Diamonds</strong> represents the absolute pinnacle of diamond curation. Rooted deeply in Surat—the diamond capital of the world—our legacy thrives where world-class craftsmanship meets the most sophisticated global standards.
+                    Established on the principles of immaculate precision and timeless luxury, <strong className="text-white font-semibold">Jainam Diamonds</strong> represents the absolute pinnacle of diamond curation. Rooted deeply in Surat, the diamond capital of the world, our legacy thrives where world-class craftsmanship meets the most sophisticated global standards.
                   </p>
                   <p>
                     Under the expert stewardship of our founder, <strong className="text-white font-semibold">Jainam Mehta</strong>, we operate with a singular, uncompromising vision: to elevate diamond selection into a profound form of art. Every single stone is examined, touched, and certified under three generations of rigorous training.
@@ -398,10 +398,10 @@ export default function ClientPage({ config, products }: { config: any, products
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 stagger-children">
               {[
-                { n: '01', title: 'Cut', body: 'The cut is the only C determined by human hands — and the most critical. We source only Excellent and Ideal grade cuts: Round Brilliant, Princess, Emerald, Oval. Every facet positioned to return light at its most breathtaking angle.' },
-                { n: '02', title: 'Color', body: 'Color in diamonds is measured by its absence. Our curated selection sits between D–F (Colorless) and G–H (Near Colorless) — stones so clear they appear to freeze light itself. Nothing warm, nothing yellow.' },
-                { n: '03', title: 'Clarity', body: 'Clarity is a record of a stone\'s journey through the Earth. We select only FL to VS grades — eye-clean stones with no visible inclusions to the naked eye. Immaculate, as every Jainam piece should be.' },
-                { n: '04', title: 'Carat', body: 'Carat is weight, not size — and size is shaped by the cut. Whether a 0.5ct daily accent or a 5ct centrepiece, we match the right carat to the right cut so the stone wears larger than it weighs.' },
+                { n: '01', title: 'Cut', body: 'The cut is the only C determined by human hands, and it is the most critical. We source only Excellent and Ideal grade cuts: Round Brilliant, Princess, Emerald, Oval. Every facet positioned to return light at its most breathtaking angle.' },
+                { n: '02', title: 'Color', body: 'Color in diamonds is measured by its absence. Our curated selection sits between D-F (Colorless) and G-H (Near Colorless), offering stones so clear they appear to freeze light itself. Nothing warm, nothing yellow.' },
+                { n: '03', title: 'Clarity', body: 'Clarity is a record of a stone\'s journey through the Earth. We select only FL to VS grades, featuring eye-clean stones with no visible inclusions to the naked eye. Immaculate, as every Jainam piece should be.' },
+                { n: '04', title: 'Carat', body: 'Carat is weight, not size, and size is shaped by the cut. Whether a 0.5ct daily accent or a 5ct centrepiece, we match the right carat to the right cut so the stone wears larger than it weighs.' },
               ].map(({ n, title, body }) => (
                 <div key={n} className="luxury-card animate-fade-in relative group border border-[#CCA43D]/25 p-8 md:p-10 hover:border-[#CCA43D]/50 transition-colors duration-500 bg-[#0c0c0c] overflow-hidden">
                   <span className="absolute top-4 right-6 text-[5rem] font-serif text-white/[0.03] leading-none select-none pointer-events-none group-hover:text-white/[0.06] transition-colors duration-700">{n}</span>
@@ -551,7 +551,7 @@ export default function ClientPage({ config, products }: { config: any, products
             <path d="M11.996 2C6.474 2 2 6.474 2 12c0 1.954.566 3.774 1.545 5.334L2 22l4.811-1.503C8.318 21.468 10.106 22 11.996 22 17.518 22 22 17.526 22 12c0-5.526-4.482-10-10.004-10zM12 20.301c-1.636 0-3.197-.432-4.576-1.24l-.328-.194-3.394 1.06 1.08-3.31-.212-.338C3.765 14.887 3.298 13.486 3.298 12 3.298 7.211 7.213 3.298 12.001 3.298 16.787 3.298 20.702 7.211 20.702 12c0 4.79-3.914 8.701-8.702 8.701zm4.783-6.526c-.262-.132-1.55-.765-1.79-.854-.239-.089-.413-.132-.587.132-.174.264-.678.854-.83 1.028-.152.175-.304.22-.566.089-1.29-.646-2.52-1.666-3.102-3.15-.152-.39-.016-.604.116-.736.118-.118.261-.305.393-.457.13-.153.174-.263.26-.438.087-.175.044-.329-.022-.46-.065-.132-.587-1.416-.805-1.938-.211-.51-.424-.442-.587-.45-.152-.008-.326-.008-.501-.008-.174 0-.457.065-.696.329-.239.263-.914.893-.914 2.179 0 1.286.936 2.531 1.066 2.706.13.175 1.846 2.817 4.473 3.95.626.269 1.115.429 1.497.55.628.2 1.201.17 1.65.103.504-.075 1.55-.633 1.768-1.244.218-.611.218-1.135.152-1.245-.065-.109-.239-.175-.501-.307z"/>
           </svg>
           <span className="text-[12px] tracking-[0.25em] uppercase text-black font-semibold relative z-10 transition-colors duration-300">
-            Speak to a diamond expert — WhatsApp us now
+            Speak to a diamond expert: WhatsApp us now
           </span>
           <svg className="w-3.5 h-3.5 text-black relative z-10 group-hover:translate-x-1.5 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
@@ -574,7 +574,7 @@ export default function ClientPage({ config, products }: { config: any, products
                 </div>
               </div>
               <p className="premium-subtext">
-                Born in Surat — where 90% of the world's diamonds are cut. Every stone passes through three generations of trained eyes before it reaches you.
+                Born in Surat, where 90% of the world's diamonds are cut. Every stone passes through three generations of trained eyes before it reaches you.
               </p>
               {/* Social icons */}
               <div className="flex gap-3">
@@ -643,7 +643,7 @@ export default function ClientPage({ config, products }: { config: any, products
         <div className="border-t border-[#CCA43D]/25 px-6 md:px-10 py-5">
           <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3">
             <p className="text-champagne/50 text-[11px] tracking-[0.25em] uppercase">
-              &copy; {new Date().getFullYear()} Jainam Diamonds — All rights reserved
+              &copy; {new Date().getFullYear()} Jainam Diamonds. All rights reserved
             </p>
 
           </div>

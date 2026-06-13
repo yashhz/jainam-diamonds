@@ -15,8 +15,30 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Jainam Diamonds | Masterpiece Collection",
-  description: "Exquisite diamonds and fine jewelry collection.",
+  metadataBase: new URL("https://jainamdiamonds.com"),
+  title: "Jainam Diamonds Masterpiece Collection",
+  description: "Exquisite natural and lab-grown diamonds and fine jewelry from Surat, the diamond capital of the world. Handcrafted heritage and certified integrity.",
+  keywords: ["Jainam Diamonds", "Surat Diamonds", "Fine Jewelry", "Natural Diamonds", "Lab-Grown Diamonds", "Eternity Rings", "Bridal Necklaces", "Bespoke Jewelry"],
+  openGraph: {
+    title: "Jainam Diamonds Masterpiece Collection",
+    description: "Exquisite natural and lab-grown diamonds and fine jewelry from Surat.",
+    url: "https://jainamdiamonds.com",
+    siteName: "Jainam Diamonds",
+    images: [
+      {
+        url: "/logo.png",
+        width: 800,
+        height: 800,
+        alt: "Jainam Diamonds Logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
