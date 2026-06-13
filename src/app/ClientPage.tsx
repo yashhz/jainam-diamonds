@@ -121,6 +121,7 @@ export default function ClientPage({ config, products }: { config: any, products
                 className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-out group-hover:scale-105"
                 src="/main page precision.mp4"
                 onTimeUpdate={handleVideoTimeUpdate}
+                data-trim="3"
               />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500" />
               <div className="absolute inset-0 flex flex-col items-start justify-end pb-16 md:pb-24 px-8 md:px-14 z-20">
@@ -388,7 +389,7 @@ export default function ClientPage({ config, products }: { config: any, products
             className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 opacity-20"
             src="/diamoand page.mp4"
             onTimeUpdate={handleVideoTimeUpdate}
-            data-trim="6"
+            data-trim="10"
           />
           <div className="relative z-10 max-w-6xl mx-auto">
             {/* ... knowledge base content identical to original ... */}
