@@ -131,6 +131,12 @@ export default function ClientPage({ config, products }: { config: any, products
                 <p className="premium-subtext mt-5 max-h-0 overflow-hidden group-hover:max-h-16 transition-all duration-700 delay-100 max-w-xs">
                   Every facet engineered to bend light at its most perfect angle.
                 </p>
+                <button
+                  className="mt-6 border border-[#CCA43D]/60 text-[#CCA43D] group-hover:border-[#CCA43D] group-hover:text-black group-hover:bg-[#CCA43D] px-6 py-2.5 text-xs font-semibold tracking-[0.2em] uppercase transition-all duration-300 rounded-sm bg-black/40 backdrop-blur-sm flex items-center gap-2 cursor-pointer relative z-30"
+                  aria-label="Explore Diamonds Collection"
+                >
+                  Explore Collection <span className="group-hover:translate-x-1.5 transition-transform duration-300">→</span>
+                </button>
               </div>
             </div>
 
@@ -152,6 +158,12 @@ export default function ClientPage({ config, products }: { config: any, products
                 <p className="premium-subtext mt-5 max-h-0 overflow-hidden group-hover:max-h-16 transition-all duration-700 delay-100 max-w-xs">
                   Passed down. Every piece holds a story worth telling forever.
                 </p>
+                <button
+                  className="mt-6 border border-[#CCA43D]/60 text-[#CCA43D] group-hover:border-[#CCA43D] group-hover:text-black group-hover:bg-[#CCA43D] px-6 py-2.5 text-xs font-semibold tracking-[0.2em] uppercase transition-all duration-300 rounded-sm bg-black/40 backdrop-blur-sm flex items-center gap-2 cursor-pointer ml-auto relative z-30"
+                  aria-label="Explore Jewelry Collection"
+                >
+                  Explore Collection <span className="group-hover:translate-x-1.5 transition-transform duration-300">→</span>
+                </button>
               </div>
             </div>
           </div>
